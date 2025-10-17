@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Radiance-Semibold';
+    /* Произвольное имя шрифта */
+    src: url('/fonts/Radiance-Semibold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Radiance';
+    /* Произвольное имя шрифта */
+    src: url('/fonts/Radiance.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Reaver-Bold';
+    /* Произвольное имя шрифта */
+    src: url('/fonts/Reaver-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Reaver-SemiBold';
+    /* Произвольное имя шрифта */
+    src: url('/fonts/Reaver-SemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#Radiance-Semibold {
+    font-family: "Radiance-Semibold", "Noto Sans", sans-serif;
+    color: #ffffffee;
+    font-size: 60px;
+}
+#Radiance {
+    font-family: "Radiance", "Noto Sans", sans-serif;
+    color: #ffffffee;
+    font-size: 60px;
+}
+#Reaver-Bold {
+    font-size: 60px;
+    line-height: 113%;
+    font-family: "Reaver-Bold", serif;
+    letter-spacing: 5px;
+    font-weight: 600;
+    color: #ffffffee;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 20px #000;
+}
+#Reaver-SemiBold {
+    font-family: "Reaver-SemiBold", "Noto Sans", sans-serif;
+    color: #ffffffee;
+    font-size: 60px;
+}
