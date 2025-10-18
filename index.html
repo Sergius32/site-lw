@@ -16,25 +16,26 @@
             <nav class="header__nav">
                 <div class="header__logo"></div>
                 <div class="header__online">
-                    <div class="header__online-icon">s</div>
-                    <div class="header__online-text">Online: </div>
+                    <div class="header__online-icon"></div>
+                    <div data-i18n="online" class="header__online-text">Online:</div>
                     <div class="header__online-count">5000</div>
                 </div>
                 <ul class="header__list">
-                    <li><a href="#!">Linkas </a></li>
-                    <li><a href="#!">Linkas </a></li>
-                    <li><a href="#!">Linkas </a></li>
-                    <li><a href="#!">Linkas </a></li>
-                    <li><a href="#!">Linkas </a></li>
+                    <li><a data-i18n="register" href="#!">Linkas </a></li>
+                    <li><a data-i18n="files" href="#!">Linkas </a></li>
+                    <li><a data-i18n="description" href="#!">Linkas </a></li>
+                    <li><a data-i18n="donate" href="#!">Linkas </a></li>
                 </ul>
-                <div class="header__lang">Ru</div>
-                <div class="header__button">Личный кабинет</div>
+                    <a href="#" id="lang-toggle" class="header__lang">
+                        <span data-i18n="language">Ru</span>
+                    </a>
+                <a href="#!" data-i18n="lk" class="header__button">Личный кабинет</a>
             </nav>
         </div>
     </header>
 
 
-
+    <script src="script.js"></script>
 </body>
 
 </html>
