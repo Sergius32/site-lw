@@ -8,9 +8,8 @@ ul {
     list-style: none;
 }
 
-html,
-body {
-    background-color: #000;
+html, body {
+    background: rgba(21, 20, 25, 1);
     overflow-x: hidden;
     width: 100%;
 }
