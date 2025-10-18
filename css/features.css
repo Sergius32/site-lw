@@ -1,7 +1,6 @@
 /* Секция "Что тебя ждет на сервере" */
 .features {
-    background: rgba(21, 20, 25, 1);
-    padding: 200px 120px 0;
+    padding: 50px 120px 0;
     display: flex;
     justify-content: center;
     align-items: flex-start;
