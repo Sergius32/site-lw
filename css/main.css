@@ -1,18 +1,19 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    border: solid 1px white;
-    font-size: 20px;
+    font-size: clamp(20px, 1.5vw, 28px);
     color: rgba(208, 190, 162, 1);
 }
 
 ul{
     list-style: none;
 }
-
-body {
+a {
+    text-decoration: none;
+}
+heml, body {
     background-color: #000;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .conteiner {
@@ -21,11 +22,12 @@ body {
 }
 
 .header__bg {
-    background-image: url("../img/header-bg.png");
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-position: center;
-    height: 1040vh;
+    /* Gradient over image using layered backgrounds */
+    background: linear-gradient(180deg, rgba(21, 20, 25, 0) 0%, rgba(21, 20, 25, 1) 100%), url("../img/header-bg.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center, center;
+    height: 100vh;
     width: 100vw;
 }
 .header__nav {
@@ -36,26 +38,58 @@ body {
     height: 100px;
     background: rgba(16, 15, 17, 0.94);
     position: fixed;
-    gap: 50px;
-    padding: 0 10%;
-}
-.header__logo {
+    top: 0;
+    left: 0;
+    right: 0;
+    gap: clamp(20px, 4vw, 50px); /* Адаптивный gap: от 20px до 50px */
+    padding: 0 clamp(15px, 5%, 150px); /* Адаптивные отступы по бокам */
+    font-family: Radiance, sans-serif;
+    box-sizing: border-box; /* Важно, чтобы padding не увеличивал ширину */
+    z-index: 1000;
+  }
+  
+  .header__logo {
     background-image: url("../img/VectorLogo=.svg");
     background-repeat: no-repeat;
-    background-size: cover;
-    width: 108px;
-    height: 52px;
-}
-.header__list {
+    background-size: contain; /* Лучше 'contain' для логотипов */
+    background-position: center;
+    width: min(108px, 20vw); /* Не больше 108px, но уменьшается на малых экранах */
+    height: auto; /* Сохраняем пропорции */
+    aspect-ratio: 108 / 52; /* Сохраняем соотношение сторон */
+  }
+  
+  .header__list {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 50px;
-}
-.header__online{
-    width: 150px;
+    gap: clamp(20px, 3.5vw, 50px); /* Адаптивный gap между пунктами меню */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header__online {
+    width: min(150px, 25vw);
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+    white-space: nowrap; /* Чтобы текст не переносился */
+  }
+
+@media (max-width: 1450px){
+    .header__nav {
+        height: 80px; /* чуть уменьшаем высоту */
+        padding: 0 clamp(15px, 4%, 120px);
+      }
+    
+      .header__logo {
+        width: min(90px, 20vw);
+      }
+    
+      .header__online {
+        width: min(130px, 22vw);
+        height: 44px;
+        font-size: clamp(14px, 2.8vw, 16px);
+      }
 }

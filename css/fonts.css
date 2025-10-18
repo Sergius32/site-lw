@@ -30,15 +30,12 @@
 #Radiance-Semibold {
     font-family: "Radiance-Semibold", "Noto Sans", sans-serif;
     color: #ffffffee;
-    font-size: 60px;
 }
 #Radiance {
     font-family: "Radiance", "Noto Sans", sans-serif;
     color: #ffffffee;
-    font-size: 60px;
 }
 #Reaver-Bold {
-    font-size: 60px;
     line-height: 113%;
     font-family: "Reaver-Bold", serif;
     letter-spacing: 5px;
@@ -50,5 +47,4 @@
 #Reaver-SemiBold {
     font-family: "Reaver-SemiBold", "Noto Sans", sans-serif;
     color: #ffffffee;
-    font-size: 60px;
 }
