@@ -47,3 +47,43 @@ langToggle.addEventListener('click', (e) => {
   e.preventDefault();
   toggleLanguage();
 });
+
+// Мобильное меню
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenuClose = document.getElementById('mobile-menu-close');
+const langToggleMobile = document.getElementById('lang-toggle-mobile');
+
+// Открытие мобильного меню
+mobileMenuToggle.addEventListener('click', () => {
+  mobileMenu.classList.add('active');
+  document.body.style.overflow = 'hidden';
+});
+
+// Закрытие мобильного меню
+mobileMenuClose.addEventListener('click', () => {
+  mobileMenu.classList.remove('active');
+  document.body.style.overflow = '';
+});
+
+// Закрытие при клике вне меню
+mobileMenu.addEventListener('click', (e) => {
+  if (e.target === mobileMenu) {
+    mobileMenu.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+});
+
+// Переключение языка в мобильном меню
+langToggleMobile.addEventListener('click', (e) => {
+  e.preventDefault();
+  toggleLanguage();
+});
+
+// Закрытие меню при изменении размера экрана
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768) {
+    mobileMenu.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+});

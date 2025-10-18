@@ -4,12 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Legend World - игровой сервер с высоким онлайном и стабильной работой">
+    <meta name="keywords" content="игра, сервер, онлайн, Legend World">
+    <meta name="author" content="Legend World">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Legend World">
+    <meta property="og:description" content="Присоединяйтесь к эпическому приключению в мире легенд и магии">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#000000">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/modern.css">
+    <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/features.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/performance.css">
     <title>Legned-World</title>
 </head>
 
@@ -31,7 +41,21 @@
                 </ul>
                     <a href="#" id="lang-toggle" class="header__lang" data-i18n="language"></a>
                 <a href="#!" data-i18n="lk" class="header__button">Личный кабинет</a>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle">☰</button>
             </nav>
+            
+            <!-- Мобильное меню -->
+            <div class="mobile-menu" id="mobile-menu">
+                <button class="mobile-menu__close" id="mobile-menu-close">×</button>
+                <ul class="mobile-menu__list">
+                    <li><a data-i18n="register" href="#!">Linkas </a></li>
+                    <li><a data-i18n="files" href="#!">Linkas </a></li>
+                    <li><a data-i18n="description" href="#!">Linkas </a></li>
+                    <li><a data-i18n="donate" href="#!">Linkas </a></li>
+                    <li><a href="#" id="lang-toggle-mobile" class="header__lang" data-i18n="language"></a></li>
+                    <li><a href="#!" data-i18n="lk" class="header__button">Личный кабинет</a></li>
+                </ul>
+            </div>
             
             <!-- Центральный блок с контентом -->
             <div class="header__content">
@@ -106,7 +130,7 @@
                         <div class="footer__content">
                             <h3 class="footer__card-title">Зарегистрируйся</h3>
                             <p class="footer__card-description">Создай мастер аккаунт</p>
-                            <button class="footer__cta-button">Регистрация</button>
+                            <button class="button">Регистрация</button>
                         </div>
                     </div>
                     
@@ -114,10 +138,10 @@
                         <div class="footer__content">
                             <h3 class="footer__card-title">Скачай файлы игры</h3>
                             <p class="footer__card-description">Выбери наиболее удобный способ</p>
-                            <div class="footer__buttons-container">
-                                <button class="footer__cta-button">Лаунчер</button>
-                                <button class="footer__cta-button">Патч</button>
-                                <button class="footer__cta-button">Клиент</button>
+                            <div class="buttons-container">
+                                <button class="button">Лаунчер</button>
+                                <button class="button">Патч</button>
+                                <button class="button">Клиент</button>
                             </div>
                         </div>
                     </div>
@@ -127,7 +151,7 @@
                     <div class="footer__content">
                         <h3 class="footer__card-title">Запусти игру</h3>
                         <p class="footer__card-description">*Перед запуском проверь обновления через launcher.exe</p>
-                        <button class="footer__cta-button">Поддержка</button>
+                        <button class="button">Поддержка</button>
                     </div>
                 </div>
             </div>

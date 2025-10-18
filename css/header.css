@@ -352,3 +352,31 @@
         font-size: 18px;
     }
 }
+
+/* Мобильная навигация */
+@media (max-width: 768px) {
+    .header__list {
+        display: none;
+    }
+    
+    .header__online {
+        display: none;
+    }
+    
+    .header__lang {
+        display: none;
+    }
+    
+    .header__button {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .header__nav {
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+}

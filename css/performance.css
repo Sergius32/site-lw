@@ -1,0 +1,57 @@
+/* Оптимизация производительности */
+
+/* Предзагрузка критических ресурсов */
+.preload-fonts {
+    font-display: swap;
+}
+
+/* Оптимизация изображений */
+img {
+    loading: lazy;
+    decoding: async;
+}
+
+/* Оптимизация анимаций */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Оптимизация для слабых устройств */
+@media (max-width: 768px) {
+    .header__bg,
+    .footer__bg {
+        will-change: transform;
+    }
+    
+    .header__content-block,
+    .footer__card,
+    .footer__bottom-card {
+        transform: translateZ(0);
+        backface-visibility: hidden;
+    }
+}
+
+/* Оптимизация скролла */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Оптимизация для печати */
+@media print {
+    .header__nav,
+    .mobile-menu,
+    .mobile-menu-toggle {
+        display: none !important;
+    }
+    
+    .header__bg,
+    .footer__bg {
+        background: none !important;
+    }
+}
