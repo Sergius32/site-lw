@@ -16,7 +16,7 @@
 .features__title {
   margin: 0 0 clamp(40px, 6vh, 80px) 0;
   line-height: 1.2;
-  font-size: clamp(28px, 4.2vw, 52px);
+  font-size: clamp(22px, 1.9vw, 52px);
   color: rgba(229, 190, 127, 1);
   text-align: center;
   max-width: 90%;
@@ -31,28 +31,23 @@
   width: 100%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .features__grid {
     grid-template-columns: 1fr;
+  }
+  .features__container {
+    padding: 0 5%;
   }
 }
 
 .features__card {
-  position: relative;
+  position: relative; /* ← обязательно! */
   overflow: hidden;
-  background: linear-gradient(
-    90deg,
-    rgba(15.51, 15.10, 17.16, 0) 0%,
-    rgba(15.51, 15.10, 17.16, 1) 48%,
-    rgba(16, 15, 17, 0) 100%
-  );
-  /* Убраны скругления */
-  border-radius: 0;
 }
 
 .features__image {
-  width: 100%;
   display: block;
+  width: 100%;
 }
 
 .features__img {
@@ -61,17 +56,23 @@
   display: block;
 }
 
+/* Контент — поверх изображения, прижат к низу */
 .features__content {
-  position: relative;
-  padding: clamp(20px, 4vh, 32px) clamp(16px, 3vw, 28px);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: clamp(10px, 1.8vh, 22px) clamp(10px, 2vw, 18px);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* контент начинается сверху */
+  justify-content: flex-end;
   align-items: center;
   text-align: center;
   color: white;
   box-sizing: border-box;
-  /* Высота теперь по содержимому — без фиксации */
+  z-index: 2;
+  background: linear-gradient(90.00deg, rgba(15.513128280639648, 15.100545883178711, 17.163461685180664, 0),rgba(15.513128280639648, 15.100545883178711, 17.163461685180664, 1) 48%,rgba(16, 15, 17, 0) 100%);
+  /* Высота теперь по содержимому — за счёт position: absolute + bottom: 0 */
 }
 
 /* Полоски сверху и снизу */
@@ -88,7 +89,6 @@
     rgba(208, 190, 162, 1) 48%,
     rgba(208, 190, 162, 0) 100%
   );
-  z-index: 2;
 }
 
 .features__content::before {
@@ -100,20 +100,21 @@
 }
 
 .features__card-title {
-  font-size: clamp(20px, 3.2vw, 32px);
+  font-size: clamp(10px, 1.8vw, 28px);
   color: rgba(229, 190, 127, 1);
-  margin: 0 0 clamp(10px, 1.2vh, 16px) 0;
   font-family: 'Radiance', sans-serif;
   font-weight: bold;
   line-height: 1.2;
+  position: relative;
   z-index: 3;
 }
 
 .features__card-description {
-  font-size: clamp(15px, 2.2vw, 20px);
+  font-size: clamp(8px, 1.5vw, 18px);
   color: rgba(157, 144, 124, 1);
   margin: 0;
   line-height: 1.4;
   font-family: 'Radiance', sans-serif;
+  position: relative;
   z-index: 3;
 }
