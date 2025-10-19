@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   // Текущий язык
-  let currentLang = localStorage.getItem('lang') || 'ru';
+  let currentLang = localStorage.getItem('lang') || 'ru' || 'en';
 
   // Элементы
   const langToggle = document.getElementById('lang-toggle');

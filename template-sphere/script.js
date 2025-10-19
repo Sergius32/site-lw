@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', async () => {
-  // Вспомогательная функция: преобразует вложенный объект в плоский с ключами через точку
+  // Получаем базовый путь из глобальной переменной
+  const BASE_PATH = window.BASE_PATH || '';
+
+  // Функция "разглаживания" объекта
   function flattenObject(obj, prefix = '') {
     return Object.keys(obj).reduce((acc, key) => {
       const pre = prefix.length ? prefix + '.' : '';
@@ -13,32 +16,34 @@ document.addEventListener('DOMContentLoaded', async () => {
     }, {});
   }
 
-  // Текущий язык
   let currentLang = localStorage.getItem('lang') || 'ru';
 
-  // Элементы
   const langToggle = document.getElementById('lang-toggle');
   const langToggleMobile = document.getElementById('lang-toggle-mobile');
   const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
   const mobileMenuClose = document.getElementById('mobile-menu-close');
 
-  // Загрузка переводов
+  // Загрузка переводов с учётом BASE_PATH
   async function loadTranslations(lang) {
     try {
-      const response = await fetch(`locales/${lang}.json`);
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+      const url = `${BASE_PATH}locales/${lang}.json`;
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      
+      const contentType = response.headers.get('content-type');
+      if (!contentType?.includes('application/json')) {
+        throw new Error('Response is not JSON');
       }
-      const nestedTranslations = await response.json();
-      return flattenObject(nestedTranslations); // Преобразуем в плоский объект
+
+      const nested = await response.json();
+      return flattenObject(nested);
     } catch (err) {
-      console.error(`Failed to load translations for language "${lang}":`, err);
+      console.error(`Failed to load translations for "${lang}":`, err);
       return {};
     }
   }
 
-  // Применение переводов ко всем элементам с data-i18n
   function applyTranslations(translations) {
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
@@ -48,7 +53,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
-  // Переключение языка
   async function toggleLanguage() {
     currentLang = currentLang === 'ru' ? 'en' : 'ru';
     localStorage.setItem('lang', currentLang);
@@ -56,11 +60,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     applyTranslations(translations);
   }
 
-  // Инициализация: загружаем и применяем перевод
+  // Инициализация
   const translations = await loadTranslations(currentLang);
   applyTranslations(translations);
 
-  // Обработчики переключения языка
+  // Обработчики
   if (langToggle) {
     langToggle.addEventListener('click', (e) => {
       e.preventDefault();
@@ -75,7 +79,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
-  // Мобильное меню
+  // Мобильное меню (без изменений)
   if (mobileMenuToggle && mobileMenu) {
     mobileMenuToggle.addEventListener('click', () => {
       mobileMenu.classList.add('active');
@@ -99,11 +103,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
-  // Закрытие мобильного меню при изменении размера (на десктопе)
+  // Закрытие при ресайзе
   window.addEventListener('resize', () => {
     if (window.innerWidth > 768 && mobileMenu) {
       mobileMenu.classList.remove('active');
       document.body.style.overflow = '';
     }
+  });
+
+  // Закрытие мобильного меню при клике по якорной ссылке
+  document.querySelectorAll('.mobile-menu a[href^="#"]').forEach(link => {
+    link.addEventListener('click', () => {
+      if (mobileMenu) {
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
   });
 });

@@ -6,7 +6,7 @@
 }
 
 .footer__bg {
-    background: url("../img/footer-bg.webp");
+    background: url("{{template}}/img/footer-bg.webp");
     background-repeat: no-repeat;
     background-size: 1924px 1371px;
     background-position: center top;
