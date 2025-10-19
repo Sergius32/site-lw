@@ -1,183 +1,119 @@
-/* Секция "Что тебя ждет на сервере" */
+/* Секция "Что тебя ждёт на сервере" */
 .features {
-    padding: 50px 120px 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 1227px;
+  padding: clamp(60px, 8vh, 120px) clamp(20px, 5vw, 120px) 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .features__container {
-    width: 1680px;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: min(100%, 1680px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .features__title {
-    margin: 0 0 clamp(60px, 8vh, 120px) 0;
-    line-height: 1.2;
-    font-size: clamp(40px, 2vw, 52px);
-    color: rgba(229, 190, 127, 1);
-    text-align: center;
-    max-width: 80%;
-    font-family: "Reaver-SemiBold", "Noto Sans", sans-serif;
+  margin: 0 0 clamp(40px, 6vh, 80px) 0;
+  line-height: 1.2;
+  font-size: clamp(28px, 4.2vw, 52px);
+  color: rgba(229, 190, 127, 1);
+  text-align: center;
+  max-width: 90%;
+  font-family: "Reaver-SemiBold", "Noto Sans", sans-serif;
 }
 
+/* Сетка: 2 колонки на средних и больших, 1 — на мобильных */
 .features__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: clamp(10px, 4vw, 20px);
-    width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(24px, 4vh, 48px);
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .features__grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .features__card {
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(90deg, 
-        rgba(15.51, 15.10, 17.16, 0) 0%, 
-        rgba(15.51, 15.10, 17.16, 1) 48%, 
-        rgba(16, 15, 17, 0) 100%);
-    min-height: 400px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    rgba(15.51, 15.10, 17.16, 0) 0%,
+    rgba(15.51, 15.10, 17.16, 1) 48%,
+    rgba(16, 15, 17, 0) 100%
+  );
+  /* Убраны скругления */
+  border-radius: 0;
 }
 
 .features__image {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    min-height: 400px;
+  width: 100%;
+  display: block;
 }
 
 .features__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .features__content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(90deg, 
-        rgba(15.51, 15.10, 17.16, 0) 0%, 
-        rgba(15.51, 15.10, 17.16, 1) 48%, 
-        rgba(16, 15, 17, 0) 100%);
-    padding: clamp(10px, 3vh, 20px) clamp(10px, 2vw, 20px);
-    border-radius: 0 0 12px 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  padding: clamp(20px, 4vh, 32px) clamp(16px, 3vw, 28px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* контент начинается сверху */
+  align-items: center;
+  text-align: center;
+  color: white;
+  box-sizing: border-box;
+  /* Высота теперь по содержимому — без фиксации */
 }
 
+/* Полоски сверху и снизу */
 .features__content::before,
 .features__content::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg,
-        rgba(208, 190, 162, 0) 0%,
-        rgba(208, 190, 162, 1) 48%,
-        rgba(208, 190, 162, 0) 100%);
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(208, 190, 162, 0) 0%,
+    rgba(208, 190, 162, 1) 48%,
+    rgba(208, 190, 162, 0) 100%
+  );
+  z-index: 2;
 }
 
 .features__content::before {
-    top: 0;
+  top: 0;
 }
 
 .features__content::after {
-    bottom: 0;
+  bottom: 0;
 }
 
 .features__card-title {
-    font-size: clamp(24px, 2.5vw, 32px);
-    color: rgba(229, 190, 127, 1);
-    margin: 0 0 clamp(8px, 1vh, 16px) 0;
-    font-family: 'Radiance', sans-serif;
-    font-weight: bold;
-    line-height: 1.2;
+  font-size: clamp(20px, 3.2vw, 32px);
+  color: rgba(229, 190, 127, 1);
+  margin: 0 0 clamp(10px, 1.2vh, 16px) 0;
+  font-family: 'Radiance', sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+  z-index: 3;
 }
 
 .features__card-description {
-    font-size: clamp(16px, 1.5vw, 24px);
-    color: rgba(157, 144, 124, 1);
-    margin: 0;
-    line-height: 1.4;
-    font-family: 'Radiance', sans-serif;
-    text-align: center;
-}
-
-/* Адаптивность */
-@media (max-width: 1920px) {
-    .features {
-        padding: clamp(100px, 10vh, 200px) clamp(60px, 6vw, 120px) 0;
-    }
-    
-    .features__container {
-        width: 100%;
-        max-width: 1680px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .features {
-        padding: clamp(80px, 8vh, 150px) clamp(40px, 4vw, 80px) 0;
-    }
-    
-    .features__grid {
-        gap: clamp(20px, 3vw, 40px);
-    }
-    
-    .features__card {
-        min-height: 350px;
-    }
-    
-    .features__image {
-        min-height: 350px;
-    }
-}
-
-@media (max-width: 768px) {
-    .features {
-        padding: clamp(60px, 6vh, 100px) clamp(20px, 3vw, 40px) 0;
-    }
-    
-    .features__grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
-        gap: clamp(15px, 2vw, 30px);
-    }
-    
-    .features__card {
-        min-height: 300px;
-    }
-    
-    .features__image {
-        min-height: 300px;
-    }
-    
-    .features__title {
-        margin-bottom: clamp(40px, 6vh, 80px);
-    }
-}
-
-@media (max-width: 480px) {
-    .features {
-        padding: clamp(40px, 5vh, 80px) clamp(15px, 2vw, 30px) 0;
-    }
-    
-    .features__card {
-        min-height: 250px;
-    }
-    
-    .features__image {
-        min-height: 250px;
-    }
+  font-size: clamp(15px, 2.2vw, 20px);
+  color: rgba(157, 144, 124, 1);
+  margin: 0;
+  line-height: 1.4;
+  font-family: 'Radiance', sans-serif;
+  z-index: 3;
 }

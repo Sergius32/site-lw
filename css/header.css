@@ -1,17 +1,19 @@
 .header__bg {
-  /* Заполняем весь viewport */
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  
-  /* Фон масштабируется с сохранением пропорций и покрывает всю область */
-  background-image: url("../img/header-bg.webp");
-  background-repeat: no-repeat;
-  background-size: cover; /* ← ключевое изменение */
-  background-position: top center;
-  
-  /* Гарантируем минимальную высоту на очень маленьких экранах */
-  min-height: 600px; /* или 100dvh для новых браузеров */
+    /* Заполняем весь viewport */
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    /* Фон масштабируется с сохранением пропорций и покрывает всю область */
+    background-image: url("../img/header-bg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* ← ключевое изменение */
+    background-position: top center;
+
+    /* Гарантируем минимальную высоту на очень маленьких экранах */
+    min-height: 600px;
+    /* или 100dvh для новых браузеров */
 }
 
 .header__nav {
@@ -109,16 +111,18 @@
 
 /* Центральный контентный блок */
 .header__content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;   /* горизонтально — по центру */
-  align-items: center;       /* вертикально — по центру */
-  z-index: 10;
-  padding-top: 15%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /* горизонтально — по центру */
+    align-items: center;
+    /* вертикально — по центру */
+    z-index: 10;
+    padding-top: 15%;
 }
 
 .header__content-block {
@@ -259,17 +263,13 @@
 
 /* Адаптивность для центрального блока */
 @media (max-width: 1200px) {
-    
+
     .header__logo-svg {
         width: clamp(300px, 45vw, 600px);
     }
 }
 
 @media (max-width: 768px) {
-    .header__content {
-        height: auto;
-        bottom: 16px;
-    }
 
     .header__content-block {
         width: clamp(300px, 95vw, 600px);
@@ -344,5 +344,28 @@
     .header__nav {
         justify-content: space-between;
         padding: 0 20px;
+    }
+}
+
+/* === МОБИЛЬНЫЕ УСТРОЙСТВА === */
+@media (max-width: 768px) {
+    .header__content {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        padding-top: 15%;
+        max-height: 85vh;
+    }
+}
+
+/* === Планшеты (опционально) === */
+@media (max-width: 1024px) {
+    .header__bg {
+        height: auto;
     }
 }
