@@ -3,7 +3,6 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    min-height: 1371px;
 }
 
 .footer__bg {
@@ -12,17 +11,17 @@
     background-size: 1924px 1371px;
     background-position: center top;
     width: 100vw;
-    min-height: 1371px;
+    min-height: 1200px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 200px 120px 0;
+    padding-top: 200px;
     box-sizing: border-box;
 }
 
 .footer__container {
-    width: 1680px;
-    max-width: 100%;
+    width: auto;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,9 +30,9 @@
 }
 
 .footer__title {
-    margin: 0 0 clamp(60px, 8vh, 120px) 0;
+    margin: 0 0 clamp(40px, 6vh, 80px) 0;
     line-height: 1.2;
-    font-size: clamp(40px, 2vw, 52px);
+    font-size: clamp(22px, 1.9vw, 52px);
     color: rgba(229, 190, 127, 1);
     text-align: center;
     max-width: 80%;
@@ -73,14 +72,13 @@
 }
 
 .footer__content {
-    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: clamp(20px, 3vh, 40px) clamp(16px, 2vw, 32px);
+    padding: clamp(32px, 3.5vh, 64px);
     box-sizing: border-box;
     position: relative;
 }
@@ -88,7 +86,6 @@
 /* Используем общие классы из common.css */
 .footer__buttons-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -122,7 +119,7 @@
 }
 
 .footer__card-title {
-    font-size: clamp(24px, 2.5vw, 32px);
+    font-size: clamp(10px, 2.8vw, 28px);
     color: rgba(229, 190, 127, 1);
     margin: 0 0 clamp(8px, 1vh, 16px) 0;
     font-family: 'Radiance', sans-serif;
@@ -131,9 +128,9 @@
 }
 
 .footer__card-description {
-    font-size: clamp(16px, 1.5vw, 24px);
+    font-size: clamp(8px, 2.5vw, 18px);
     color: rgba(157, 144, 124, 1);
-    margin: 0;
+    margin-bottom: 5%;
     line-height: 1.4;
     font-family: 'Radiance', sans-serif;
     text-align: center;
@@ -167,18 +164,6 @@
 }
 
 /* Адаптивность */
-@media (max-width: 1920px) {
-    
-    .footer__container {
-        max-width: 1680px;
-    }
-    
-    .footer__card,
-    .footer__bottom-card {
-        width: auto;
-        height: auto;
-    }
-}
 
 @media (max-width: 1200px) {
     .footer__bg {
@@ -191,18 +176,12 @@
         gap: clamp(20px, 3vw, 40px);
     }
     
-    .footer__card,
-    .footer__bottom-card {
-        width: clamp(500px, 45vw, 700px);
-        height: clamp(220px, 22vh, 280px);
-        max-width: 100%;
-    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .footer__bg {
-        background-size: 768px auto;
-        min-height: calc(768px * 1371 / 1924);
+        background-size: auto;
+        min-height: 1200px;
         padding: clamp(60px, 6vh, 100px) clamp(20px, 3vw, 40px) 0;
     }
     
@@ -215,15 +194,6 @@
         gap: clamp(15px, 2vw, 30px);
     }
     
-    .footer__card,
-    .footer__bottom-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: clamp(300px, 90vw, 600px);
-        height: clamp(200px, 20vh, 250px);
-        max-width: 100%;
-    }
     
     .footer__title {
         margin-bottom: clamp(40px, 6vh, 80px);
@@ -234,15 +204,22 @@
     .footer__bg {
         padding: clamp(40px, 5vh, 80px) clamp(15px, 2vw, 30px) 0;
     }
-    
+    .button {
+        width: clamp(100px, 10vw, 200px);
+        font-size: clamp(10px, 1.8vw, 20px);
+        height: clamp(10px, 5vw, 200px);
+    }
+    .footer__content{
+        padding: 5%;
+    }
     .footer__container {
         padding: 0 5px;
     }
     
-    .footer__card,
-    .footer__bottom-card {
-        width: clamp(280px, 95vw, 500px);
-        height: clamp(180px, 18vh, 220px);
-        max-width: 100%;
+}
+@media (max-width: 320px) {
+    .footer__buttons-container {
+    flex-direction: column;
+    gap: 5px;
     }
 }

@@ -31,7 +31,7 @@
   width: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .features__grid {
     grid-template-columns: 1fr;
   }
@@ -100,7 +100,7 @@
 }
 
 .features__card-title {
-  font-size: clamp(10px, 1.8vw, 28px);
+  font-size: clamp(10px, 2.8vw, 28px);
   color: rgba(229, 190, 127, 1);
   font-family: 'Radiance', sans-serif;
   font-weight: bold;
@@ -110,7 +110,7 @@
 }
 
 .features__card-description {
-  font-size: clamp(8px, 1.5vw, 18px);
+  font-size: clamp(8px, 2.5vw, 18px);
   color: rgba(157, 144, 124, 1);
   margin: 0;
   line-height: 1.4;
