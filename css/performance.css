@@ -29,12 +29,11 @@ img {
         will-change: transform;
     }
     
-    .header__content-block,
-    .footer__card,
-    .footer__bottom-card {
-        transform: translateZ(0);
-        backface-visibility: hidden;
-    }
+  .header__content-block {
+    width: clamp(300px, 95vw, 600px);
+    gap: clamp(6px, 1.5vw, 12px);
+    padding: clamp(12px, 2.8vw, 24px) clamp(12px, 4vw, 24px);
+  }
 }
 
 /* Оптимизация скролла */

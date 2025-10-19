@@ -8,12 +8,12 @@
     --text-secondary: rgba(157, 144, 124, 1);
     --border-color: rgba(208, 190, 162, 1);
     --button-bg: rgba(230, 165, 65, 1);
-    
+
     /* Шрифты */
     --font-primary: 'Reaver-Bold', sans-serif;
     --font-secondary: 'Radiance', sans-serif;
     --font-semi: 'Reaver-SemiBold', sans-serif;
-    
+
     /* Размеры */
     --container-width: 1680px;
     --section-padding: 200px 120px 0;
@@ -53,10 +53,10 @@
 .card {
     position: relative;
     border-radius: var(--card-border-radius);
-    background: linear-gradient(90deg, 
-        rgba(15.51, 15.10, 17.16, 0) 0%, 
-        var(--card-bg) 48%, 
-        rgba(16, 15, 17, 0) 100%);
+    background: linear-gradient(90deg,
+            rgba(15.51, 15.10, 17.16, 0) 0%,
+            var(--card-bg) 48%,
+            rgba(16, 15, 17, 0) 100%);
     border: 1px solid rgba(208, 190, 162, 0.2);
     overflow: hidden;
 }
@@ -82,9 +82,9 @@
     right: 0;
     height: 1px;
     background: linear-gradient(90deg,
-        rgba(208, 190, 162, 0) 0%,
-        var(--border-color) 48%,
-        rgba(208, 190, 162, 0) 100%);
+            rgba(208, 190, 162, 0) 0%,
+            var(--border-color) 48%,
+            rgba(208, 190, 162, 0) 100%);
 }
 
 .card__content::before {
@@ -119,9 +119,9 @@
     height: var(--button-height);
     flex-shrink: 0;
     box-sizing: border-box;
-    background: linear-gradient(90deg, 
-        rgba(43.19, 41.73, 49.04, 1), 
-        rgba(27, 26, 31, 1) 100%);
+    background: linear-gradient(90deg,
+            rgba(43.19, 41.73, 49.04, 1),
+            rgba(27, 26, 31, 1) 100%);
     border: 1px solid var(--border-color);
     border-radius: 2px;
     color: var(--accent-color);
@@ -229,28 +229,28 @@
 }
 
 /* Адаптивность */
+@media (max-width: 480px) {
+    .section__container {
+        padding: 0 10px;
+    }
+}
 @media (max-width: 768px) {
     .mobile-menu-toggle {
         display: block;
     }
-    
+
     .section__container {
         padding: 0 15px;
     }
-    
+
     .buttons-container {
         flex-direction: column;
         gap: 15px;
     }
-    
+
     .buttons-container .button {
         width: 100%;
         max-width: 300px;
     }
 }
 
-@media (max-width: 480px) {
-    .section__container {
-        padding: 0 10px;
-    }
-}
