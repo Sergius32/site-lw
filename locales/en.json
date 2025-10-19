@@ -1,9 +1,53 @@
 {
-    "online": "Online",
-    "lk": "Personal account",
+  "header": {
+    "online": "Online:",
     "register": "Register",
     "files": "Files",
     "description": "Description",
     "donate": "Donate",
-    "language": "En"
+    "language": "Language",
+    "lk": "Account",
+    "launch_date": "LAUNCHING DECEMBER 1 AT 8:00 PM",
+    "subtitle": "Interlude x1200",
+    "cta_button": "Start Playing"
+  },
+  "features": {
+    "title": "WHAT AWAITS YOU ON THE SERVER",
+    "farm": {
+      "title": "Personal Farm",
+      "description": "Unique farm mechanics where you can raise animals and earn passive income"
+    },
+    "instances": {
+      "title": "Instances",
+      "description": "Private farming locations with great loot and a raid boss at the end"
+    },
+    "gear": {
+      "title": "Gear & Cosmetics",
+      "description": "Hundreds of costumes and accessories, rare gear, and 3 tiers of epic jewelry — all enhancing your experience without affecting class balance"
+    },
+    "fun": {
+      "title": "Comfortable Gameplay & Endless Fun",
+      "description": "Stable server, high population, various events, and personal tournaments to keep you entertained"
+    }
+  },
+  "footer": {
+    "title": "START YOUR JOURNEY NOW",
+    "register": {
+      "title": "Register",
+      "description": "Create a master account",
+      "button": "Registration"
+    },
+    "download": {
+      "title": "Download Game Files",
+      "description": "Choose the most convenient method",
+      "launcher": "Launcher",
+      "patch": "Patch",
+      "client": "Client"
+    },
+    "launch": {
+      "title": "Launch the Game",
+      "description": "*Before launching, check for updates via launcher.exe",
+      "support": "Support"
+    }
   }
+}

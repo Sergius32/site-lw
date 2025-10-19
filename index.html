@@ -30,17 +30,17 @@
                 <div class="header__logo"></div>
                 <div class="header__online">
                     <div class="header__online-icon"></div>
-                    <div data-i18n="online" class="header__online-text">Online:</div>
+                    <div data-i18n="header.online" class="header__online-text">Loading...</div>
                     <div class="header__online-count">5000</div>
                 </div>
                 <ul class="header__list">
-                    <li><a data-i18n="register" href="#!">Loading...</a></li>
-                    <li><a data-i18n="files" href="#!">Loading...</a></li>
-                    <li><a data-i18n="description" href="#!">Loading...</a></li>
-                    <li><a data-i18n="donate" href="#!">Loading...</a></li>
+                    <li><a data-i18n="header.register" href="#!">Loading...</a></li>
+                    <li><a data-i18n="header.files" href="#!">Loading...</a></li>
+                    <li><a data-i18n="header.description" href="#!">Loading...</a></li>
+                    <li><a data-i18n="header.donate" href="#!">Loading...</a></li>
                 </ul>
-                    <a href="#" id="lang-toggle" class="header__lang" data-i18n="language"></a>
-                <a href="#!" data-i18n="lk" class="header__button">Loading...</a>
+                <a href="#" id="lang-toggle" class="header__lang" data-i18n="header.language">Loading...</a>
+                <a href="#!" data-i18n="header.lk" class="header__button">Loading...</a>
                 <button class="mobile-menu-toggle" id="mobile-menu-toggle">☰</button>
             </nav>
             
@@ -48,12 +48,12 @@
             <div class="mobile-menu" id="mobile-menu">
                 <button class="mobile-menu__close" id="mobile-menu-close">×</button>
                 <ul class="mobile-menu__list">
-                    <li><a data-i18n="register" href="#!">Loading...</a></li>
-                    <li><a data-i18n="files" href="#!">Loading...</a></li>
-                    <li><a data-i18n="description" href="#!">Loading...</a></li>
-                    <li><a data-i18n="donate" href="#!">Loading...</a></li>
-                    <li><a href="#" id="lang-toggle-mobile" class="header__lang" data-i18n="language"></a></li>
-                    <li><a href="#!" data-i18n="lk" class="header__button">Loading...</a></li>
+                    <li><a data-i18n="header.register" href="#!">Loading...</a></li>
+                    <li><a data-i18n="header.files" href="#!">Loading...</a></li>
+                    <li><a data-i18n="header.description" href="#!">Loading...</a></li>
+                    <li><a data-i18n="header.donate" href="#!">Loading...</a></li>
+                    <li><a href="#" id="lang-toggle-mobile" class="header__lang" data-i18n="header.language"></a></li>
+                    <li><a href="#!" data-i18n="header.lk" class="header__button">Loading...</a></li>
                 </ul>
             </div>
             
@@ -63,9 +63,9 @@
                     <div class="header__logo-main">
                         <img src="./img/VectorLogo--.svg" alt="Legend World" class="header__logo-svg">
                     </div>
-                    <p class="header__open">ОТКРЫТИЕ 1 ДЕКАБРЯ В 20:00</p>
-                    <p class="header__description">Interlude x1200</p>
-                    <button class="header__cta-button">Начать играть</button>
+                    <p data-i18n="header.launch_date" class="header__open">ОТКРЫТИЕ 1 ДЕКАБРЯ В 20:00</p>
+                    <p data-i18n="header.subtitle" class="header__description">Interlude x1200</p>
+                    <button data-i18n="header.cta_button" class="header__cta-button">Начать играть</button>
                 </div>
             </div>
         </div>
@@ -74,15 +74,15 @@
     <!-- Секция "Что тебя ждет на сервере" -->
     <section class="features">
         <div class="features__container">
-            <h2 class="features__title">ЧТО ТЕБЯ ЖДЁТ НА СЕРВЕРЕ</h2>
+            <h2 data-i18n="features.title" class="features__title">ЧТО ТЕБЯ ЖДЁТ НА СЕРВЕРЕ</h2>
             <div class="features__grid">
                 <div class="features__card">
                     <div class="features__image">
                         <img src="./img/Rectangle_1_16.webp" alt="Feature 1" class="features__img">
                     </div>
                     <div class="features__content">
-                        <h3 class="features__card-title">Собственная ферма</h3>
-                        <p class="features__card-description">Уникальная механика фермы, где можно выращивать животных и получать пассивный доход</p>
+                        <h3 data-i18n="features.farm.title" class="features__card-title">Собственная ферма</h3>
+                        <p data-i18n="features.farm.description" class="features__card-description">Уникальная механика фермы, где можно выращивать животных и получать пассивный доход</p>
                     </div>
                 </div>
                 
@@ -91,8 +91,8 @@
                         <img src="./img/Rectangle_1_21.webp" alt="Feature 2" class="features__img">
                     </div>
                     <div class="features__content">
-                        <h3 class="features__card-title">Инстансы</h3>
-                        <p class="features__card-description">Персональные фарм локации с вкусным дропом и рейдбоссом в конце</p>
+                        <h3 data-i18n="features.instances.title" class="features__card-title">Инстансы</h3>
+                        <p data-i18n="features.instances.description" class="features__card-description">Персональные фарм локации с вкусным дропом и рейдбоссом в конце</p>
                     </div>
                 </div>
                 
@@ -101,8 +101,8 @@
                         <img src="./img/Rectangle_1_26.webp" alt="Feature 3" class="features__img">
                     </div>
                     <div class="features__content">
-                        <h3 class="features__card-title">Экипировка</h3>
-                        <p class="features__card-description">Сотни костюмов и аксессуаров, Rare-экипировка, 3 уровня эпик бижутерии, всё это отлично дополняет игру и не влияет на баланс классов</p>
+                        <h3 data-i18n="features.gear.title" class="features__card-title">Экипировка</h3>
+                        <p data-i18n="features.gear.description" class="features__card-description">Сотни костюмов и аксессуаров, Rare-экипировка, 3 уровня эпик бижутерии, всё это отлично дополняет игру и не влияет на баланс классов</p>
                     </div>
                 </div>
                 
@@ -111,8 +111,8 @@
                         <img src="./img/Rectangle_1_31.webp" alt="Feature 4" class="features__img">
                     </div>
                     <div class="features__content">
-                        <h3 class="features__card-title">Комфортная игра и море фана</h3>
-                        <p class="features__card-description">Стабильный сервер, высокий онлайн, различные эвенты и персональные турниры не дадут тебе скучать</p>
+                        <h3 data-i18n="features.fun.title" class="features__card-title">Комфортная игра и море фана</h3>
+                        <p data-i18n="features.fun.description" class="features__card-description">Стабильный сервер, высокий онлайн, различные эвенты и персональные турниры не дадут тебе скучать</p>
                     </div>
                 </div>
             </div>
@@ -123,25 +123,25 @@
     <footer class="footer">
         <div class="footer__bg">
             <div class="footer__container">
-                <h2 class="footer__title">НАЧНИ СВОЙ ПУТЬ СЕЙЧАС</h2>
+                <h2 data-i18n="footer.title" class="footer__title">НАЧНИ СВОЙ ПУТЬ СЕЙЧАС</h2>
                 
                 <div class="footer__grid">
                     <div class="footer__card">
                         <div class="footer__content">
-                            <h3 class="footer__card-title">Зарегистрируйся</h3>
-                            <p class="footer__card-description">Создай мастер аккаунт</p>
-                            <button class="button">Регистрация</button>
+                            <h3 data-i18n="footer.register.title" class="footer__card-title">Зарегистрируйся</h3>
+                            <p data-i18n="footer.register.description" class="footer__card-description">Создай мастер аккаунт</p>
+                            <button data-i18n="footer.register.button" class="button">Регистрация</button>
                         </div>
                     </div>
                     
                     <div class="footer__card">
                         <div class="footer__content">
-                            <h3 class="footer__card-title">Скачай файлы игры</h3>
-                            <p class="footer__card-description">Выбери наиболее удобный способ</p>
+                            <h3 data-i18n="footer.download.title" class="footer__card-title">Скачай файлы игры</h3>
+                            <p data-i18n="footer.download.description" class="footer__card-description">Выбери наиболее удобный способ</p>
                             <div class="footer__buttons-container">
-                                <button class="button">Лаунчер</button>
-                                <button class="button">Патч</button>
-                                <button class="button">Клиент</button>
+                                <button data-i18n="footer.download.launcher" class="button">Лаунчер</button>
+                                <button data-i18n="footer.download.patch" class="button">Патч</button>
+                                <button data-i18n="footer.download.client" class="button">Клиент</button>
                             </div>
                         </div>
                     </div>
@@ -149,9 +149,9 @@
                 
                 <div class="footer__bottom-card">
                     <div class="footer__content">
-                        <h3 class="footer__card-title">Запусти игру</h3>
-                        <p class="footer__card-description">*Перед запуском проверь обновления через launcher.exe</p>
-                        <button class="button">Поддержка</button>
+                        <h3 data-i18n="footer.launch.title" class="footer__card-title">Запусти игру</h3>
+                        <p data-i18n="footer.launch.description" class="footer__card-description">*Перед запуском проверь обновления через launcher.exe</p>
+                        <button data-i18n="footer.launch.support" class="button">Поддержка</button>
                     </div>
                 </div>
             </div>
