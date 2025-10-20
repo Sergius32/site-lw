@@ -5,12 +5,11 @@
     height: 100vh;
 
     /* Фон масштабируется с сохранением пропорций и покрывает всю область */
-    background-image: url("{{template}}/img/header-bg.webp");
+    background-image: url("../img/header-bg.webp");
     background-repeat: no-repeat;
     background-size: cover;
     /* ← ключевое изменение */
     background-position: top center;
-
     /* Гарантируем минимальную высоту на очень маленьких экранах */
     min-height: 600px;
     /* или 100dvh для новых браузеров */
@@ -35,7 +34,7 @@
 }
 
 .header__logo {
-    background-image: url("{{template}}/img/VectorLogo=.svg");
+    background-image: url("../img/vectorlogonav.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -71,8 +70,8 @@
     white-space: nowrap;
 }
 
-.header__online-icon {
-    background-image: url("{{template}}/img/Ellipse_1_72.webp");
+.header__online_icon {
+    background-image: url("../img/Ellipse_1_72.webp");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -174,16 +173,14 @@
     bottom: 0;
 }
 
-.header__logo-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0;
-}
 
-.header__logo-svg {
+.header__logo_center {
+    background-image: url("../img/vectorlogoheader.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     width: clamp(150px, 35vw, 652px);
+    aspect-ratio: 5 / 1;
     height: auto;
     max-width: 100%;
     object-fit: contain;
@@ -264,7 +261,7 @@
 /* Адаптивность для центрального блока */
 @media (max-width: 1200px) {
 
-    .header__logo-svg {
+    .header__logo_center {
         width: clamp(300px, 45vw, 600px);
     }
 }
@@ -277,7 +274,7 @@
         padding: clamp(12px, 2.8vw, 24px) clamp(12px, 4vw, 24px);
     }
 
-    .header__logo-svg {
+    .header__logo_center {
         width: clamp(250px, 40vw, 500px);
     }
 
