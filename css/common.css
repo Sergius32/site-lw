@@ -9,10 +9,6 @@
     --border-color: rgba(208, 190, 162, 1);
     --button-bg: rgba(230, 165, 65, 1);
 
-    /* Шрифты */
-    --font-primary: 'Reaver-Bold', sans-serif;
-    --font-secondary: 'Radiance', sans-serif;
-    --font-semi: 'Reaver-SemiBold', sans-serif;
 
     /* Размеры */
     --container-width: 1680px;
@@ -133,6 +129,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    font-family: "Underdog", system-ui;
 }
 
 .button:hover {

@@ -36,7 +36,6 @@
     color: rgba(229, 190, 127, 1);
     text-align: center;
     max-width: 80%;
-    font-family: "Reaver-SemiBold", "Noto Sans", sans-serif;
 }
 
 .footer__grid {
@@ -51,10 +50,10 @@
     width: auto;
     height: auto;
     max-width: 100%;
-    background: linear-gradient(90deg, 
-        rgba(15.51, 15.10, 17.16, 0) 0%, 
-        rgba(15.51, 15.10, 17.16, 1) 48%, 
-        rgba(16, 15, 17, 0) 100%);
+    background: linear-gradient(90deg,
+            rgba(15.51, 15.10, 17.16, 0) 0%,
+            rgba(15.51, 15.10, 17.16, 1) 48%,
+            rgba(16, 15, 17, 0) 100%);
     position: relative;
     overflow: hidden;
 }
@@ -63,10 +62,10 @@
     width: auto;
     height: auto;
     max-width: 100%;
-    background: linear-gradient(90deg, 
-        rgba(15.51, 15.10, 17.16, 0) 0%, 
-        rgba(15.51, 15.10, 17.16, 1) 48%, 
-        rgba(16, 15, 17, 0) 100%);
+    background: linear-gradient(90deg,
+            rgba(15.51, 15.10, 17.16, 0) 0%,
+            rgba(15.51, 15.10, 17.16, 1) 48%,
+            rgba(16, 15, 17, 0) 100%);
     position: relative;
     overflow: hidden;
 }
@@ -105,9 +104,9 @@
     right: 0;
     height: 1px;
     background: linear-gradient(90deg,
-        rgba(208, 190, 162, 0) 0%,
-        rgba(208, 190, 162, 1) 48%,
-        rgba(208, 190, 162, 0) 100%);
+            rgba(208, 190, 162, 0) 0%,
+            rgba(208, 190, 162, 1) 48%,
+            rgba(208, 190, 162, 0) 100%);
 }
 
 .footer__content::before {
@@ -122,9 +121,8 @@
     font-size: clamp(10px, 2.8vw, 28px);
     color: rgba(229, 190, 127, 1);
     margin: 0 0 clamp(8px, 1vh, 16px) 0;
-    font-family: 'Radiance', sans-serif;
-    font-weight: bold;
     line-height: 1.2;
+    font-family: "Gabriela", serif;
 }
 
 .footer__card-description {
@@ -132,8 +130,8 @@
     color: rgba(157, 144, 124, 1);
     margin-bottom: 5%;
     line-height: 1.4;
-    font-family: 'Radiance', sans-serif;
     text-align: center;
+    font-family: "Gabriela", serif;
 }
 
 .footer__cta-button {
@@ -141,7 +139,7 @@
     height: 50px;
     flex-shrink: 0;
     /* Стилизация */
-    background: linear-gradient(90.00deg, rgba(43.191566467285156, 41.72984313964844, 49.0384635925293, 1),rgba(27, 26, 31, 1) 100%);
+    background: linear-gradient(90.00deg, rgba(43.191566467285156, 41.72984313964844, 49.0384635925293, 1), rgba(27, 26, 31, 1) 100%);
     border: 1px solid rgba(208, 190, 162, 1);
     border-radius: 2px;
     color: rgba(229, 190, 127, 1);
@@ -171,11 +169,11 @@
         min-height: calc(1200px * 1371 / 1924);
         padding: clamp(80px, 8vh, 150px) clamp(40px, 4vw, 80px) 0;
     }
-    
+
     .footer__grid {
         gap: clamp(20px, 3vw, 40px);
     }
-    
+
 }
 
 @media (max-width: 1024px) {
@@ -184,17 +182,17 @@
         min-height: 1200px;
         padding: clamp(60px, 6vh, 100px) clamp(20px, 3vw, 40px) 0;
     }
-    
+
     .footer__container {
         padding: 0 10px;
     }
-    
+
     .footer__grid {
         grid-template-columns: 1fr;
         gap: clamp(15px, 2vw, 30px);
     }
-    
-    
+
+
     .footer__title {
         margin-bottom: clamp(40px, 6vh, 80px);
     }
@@ -204,22 +202,26 @@
     .footer__bg {
         padding: clamp(40px, 5vh, 80px) clamp(15px, 2vw, 30px) 0;
     }
+
     .button {
         width: clamp(100px, 10vw, 200px);
         font-size: clamp(10px, 1.8vw, 20px);
         height: clamp(10px, 5vw, 200px);
     }
-    .footer__content{
+
+    .footer__content {
         padding: 5%;
     }
+
     .footer__container {
         padding: 0 5px;
     }
-    
+
 }
+
 @media (max-width: 320px) {
     .footer__buttons-container {
-    flex-direction: column;
-    gap: 5px;
+        flex-direction: column;
+        gap: 5px;
     }
 }

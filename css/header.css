@@ -29,7 +29,6 @@
     right: 0;
     gap: clamp(20px, 4vw, 50px);
     padding: 0 clamp(15px, 5%, 150px);
-    font-family: Radiance, sans-serif;
     box-sizing: border-box;
     z-index: 1000;
 }
@@ -195,7 +194,6 @@
     text-align: center;
     margin: 0;
     max-width: 80%;
-    font-family: "Reaver-SemiBold", "Noto Sans", sans-serif;
 }
 
 .header__description {
@@ -204,7 +202,6 @@
     text-align: center;
     margin: 0;
     max-width: 80%;
-    font-family: "Reaver-SemiBold", "Noto Sans", sans-serif;
 }
 
 .header__cta-button {
@@ -219,8 +216,6 @@
     border-radius: 2px;
     color: #ffffff;
     font-size: clamp(18px, 1.8vw, 24px);
-    font-weight: bold;
-    font-family: 'Radiance', sans-serif;
 
     display: flex;
     align-items: center;
