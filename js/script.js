@@ -26,12 +26,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Загрузка переводов
   async function loadTranslations(lang) {
     try {
-      const response = await fetch(`locales/${lang}.json`);
+      const templatePath = window.templatePath || '';
+      const url = `${templatePath}/locales/${lang}.json`;
+      const response = await fetch(url);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const nestedTranslations = await response.json();
-      return flattenObject(nestedTranslations); // Преобразуем в плоский объект
+      return flattenObject(nestedTranslations);
     } catch (err) {
       console.error(`Failed to load translations for language "${lang}":`, err);
       return {};

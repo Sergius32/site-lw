@@ -15,14 +15,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gabriela&family=Underdog&display=swap" rel="stylesheet">
-    <link rel="icon" href="{{template}}/img/favicon_16.png" type="image/x-icon">
-    <link rel="stylesheet" href="{{template}}/css/main.css">
-    <link rel="stylesheet" href="{{template}}/css/fonts.css">
-    <link rel="stylesheet" href="{{template}}/css/modern.css">
-    <link rel="stylesheet" href="{{template}}/css/common.css">
-    <link rel="stylesheet" href="{{template}}/css/header.css">
-    <link rel="stylesheet" href="{{template}}/css/features.css">
-    <link rel="stylesheet" href="{{template}}/css/footer.css">
+    <link rel="icon" href="./img/favicon_16.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/modern.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/features.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <title>Legned-World PvP x1200 Interlude Server Lineage 2</title>
 </head>
 
@@ -35,11 +35,8 @@
                 </a>
                 <div class="header__online">
                     <div class="header__online-icon"></div>
-                    <div class="header__online-text underdog-regular">{%
-                        if server.getStatus().getGameServer() %}<span
-                            style="color:rgba(87, 215, 80, 1);">Online</span>{%
-                        else %}<span style="color: rgb(249, 12, 12);">Offline</span>{% endif %}</div>
-                    <div class="header__online-text underdog-regular">{{ server.getStatus().getOnline() }}</div>
+                    <div data-i18n="header.online" class="header__online-text underdog-regular">Loading...</div>
+                    <div class="header__online-text underdog-regular">5000</div>
                 </div>
                 <ul class="header__list">
                     <li><a href="https://legend-world.online/signup" data-i18n="header.register"
@@ -77,7 +74,7 @@
             <div class="header__content">
                 <div class="header__content-block">
                     <div class="header__logo-main">
-                        <img src="{{template}}/img/VectorLogo--.svg" alt="Legend World" class="header__logo-svg">
+                        <img src="./img/VectorLogo--.svg" alt="Legend World" class="header__logo-svg">
                     </div>
                     <p data-i18n="header.launch_date" class="header__open underdog-regular">ОТКРЫТИЕ 1 ДЕКАБРЯ В 20:00
                     </p>
@@ -96,7 +93,7 @@
             <div class="features__grid">
                 <div class="features__card">
                     <div class="features__image">
-                        <img src="{{template}}/img/Rectangle_1_16.webp" alt="Feature 1" class="features__img">
+                        <img src="./img/Rectangle_1_16.webp" alt="Feature 1" class="features__img">
                     </div>
                     <div class="features__content">
                         <h3 data-i18n="features.farm.title" class="features__card-title">Собственная ферма</h3>
@@ -107,7 +104,7 @@
 
                 <div class="features__card">
                     <div class="features__image">
-                        <img src="{{template}}/img/Rectangle_1_21.webp" alt="Feature 2" class="features__img">
+                        <img src="./img/Rectangle_1_21.webp" alt="Feature 2" class="features__img">
                     </div>
                     <div class="features__content">
                         <h3 data-i18n="features.instances.title" class="features__card-title">Инстансы</h3>
@@ -118,7 +115,7 @@
 
                 <div class="features__card">
                     <div class="features__image">
-                        <img src="{{template}}/img/Rectangle_1_26.webp" alt="Feature 3" class="features__img">
+                        <img src="./img/Rectangle_1_26.webp" alt="Feature 3" class="features__img">
                     </div>
                     <div class="features__content">
                         <h3 data-i18n="features.gear.title" class="features__card-title">Экипировка</h3>
@@ -130,7 +127,7 @@
 
                 <div class="features__card">
                     <div class="features__image">
-                        <img src="{{template}}/img/Rectangle_1_31.webp" alt="Feature 4" class="features__img">
+                        <img src="./img/Rectangle_1_31.webp" alt="Feature 4" class="features__img">
                     </div>
                     <div class="features__content">
                         <h3 data-i18n="features.fun.title" class="features__card-title">Комфортная игра и море фана</h3>
@@ -154,8 +151,7 @@
                             <h3 data-i18n="footer.register.title" class="footer__card-title">Зарегистрируйся</h3>
                             <p data-i18n="footer.register.description" class="footer__card-description">Создай мастер
                                 аккаунт</p>
-                            <a href="https://legend-world.online/signup" data-i18n="footer.register.button"
-                                class="button">Регистрация</a>
+                            <a href="#!" data-i18n="footer.register.button" class="button">Регистрация</a>
                         </div>
                     </div>
 
@@ -178,18 +174,14 @@
                         <h3 data-i18n="footer.launch.title" class="footer__card-title">Запусти игру</h3>
                         <p data-i18n="footer.launch.description" class="footer__card-description">*Перед запуском
                             проверь обновления через launcher.exe</p>
-                        <a href="https://legend-world.online/support" data-i18n="footer.launch.support"
-                            class="button">Поддержка</a>
+                        <a href="#!" data-i18n="footer.launch.support" class="button">Поддержка</a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        window.templatePath = "{{template}}";
-    </script>
-    <script src="{{template}}/js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

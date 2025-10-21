@@ -43,6 +43,13 @@
     aspect-ratio: 108 / 52;
 }
 
+.header__logo-link {
+    display: block;
+    /* или inline-block, в зависимости от макета */
+    text-decoration: none;
+    outline: none;
+}
+
 .header__list {
     display: flex;
     flex-direction: row;
@@ -82,12 +89,11 @@
 
 .header__online-text {
     margin: 0 10px;
-    color: rgba(87, 215, 80, 1);
 }
 
 .header__button {
     width: 100%;
-    max-width: 270px;
+    max-width: fit-content;
     min-width: 160px;
     height: 44px;
     display: flex;
@@ -189,7 +195,7 @@
 }
 
 .header__open {
-    font-size: clamp(28px, 2.8vw, 72px);
+    font-size: clamp(20px, 11.0px + 2.75vw, 72px);
     color: rgba(244, 177, 74, 1);
     text-align: center;
     margin: 0;
@@ -197,7 +203,7 @@
 }
 
 .header__description {
-    font-size: clamp(22px, 1.9vw, 52px);
+    font-size: clamp(16px, 9.0px + 2.0vw, 52px);
     color: rgba(244, 177, 74, 1);
     text-align: center;
     margin: 0;
@@ -205,9 +211,8 @@
 }
 
 .header__cta-button {
-    width: clamp(140px, 36vw, 300px);
-    height: clamp(40px, 4vh, 60px);
-    margin-top: clamp(16px, 2vh, 32px);
+    width: clamp(100px, 75px + 18.75vw, 400px);
+    height: clamp(25px, 20.3125px + 1.5625vh, 50px);
 
     box-sizing: border-box;
     background: rgba(230, 165, 65, 1);
@@ -215,7 +220,7 @@
     border: 1px solid rgba(208, 190, 162, 1);
     border-radius: 2px;
     color: #ffffff;
-    font-size: clamp(18px, 1.8vw, 24px);
+    font-size: clamp(12px, 8.25px + 0.75vw, 24px);
 
     display: flex;
     align-items: center;
@@ -269,13 +274,11 @@
     .header__content-block {
         width: clamp(300px, 95vw, 600px);
         gap: clamp(6px, 1.5vw, 12px);
-        padding: clamp(12px, 2.8vw, 24px) clamp(12px, 4vw, 24px);
     }
 
     .header__logo-svg {
         width: clamp(250px, 40vw, 500px);
     }
-
 }
 
 @media (max-width: 950px) {
@@ -284,6 +287,7 @@
     }
 
     .header__nav {
+        height: 50px;
         display: flex;
         justify-content: center;
     }
@@ -339,6 +343,7 @@
     .header__nav {
         justify-content: space-between;
         padding: 0 20px;
+        height: 50px;
     }
 }
 
@@ -362,5 +367,15 @@
 @media (max-width: 1024px) {
     .header__bg {
         height: auto;
+    }
+}
+@media (max-width: 426px) {
+    .header__content {
+        margin-top: 20%;
+    }
+}
+@media (max-width: 320px) {
+    .header__content {
+        margin-top: 30%;
     }
 }
