@@ -48,9 +48,10 @@
 }
 
 .features__img {
-  width: 100%;
-  height: auto;
+  width: 830px;
+  height: 535px;
   display: block;
+  object-fit: cover;
 }
 
 /* Контент — поверх изображения, прижат к низу */

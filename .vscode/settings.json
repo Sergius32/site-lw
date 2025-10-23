@@ -1,3 +1,12 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "editor.formatOnSave": false,
+    "files.autoSave": "onFocusChange",
+    "editor.wordWrap": "on",
+    "editor.formatOnPaste": false,
+    "editor.columnSelection": false,
+    "editor.definitionLinkOpensInPeek": false,
+    "window.closeWhenEmpty": false,
+    "window.density.editorTabHeight": "default",
+    "accessibility.signalOptions.debouncePositionChanges": false
 }

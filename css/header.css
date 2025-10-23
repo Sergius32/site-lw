@@ -140,7 +140,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: clamp(10px, 3vh, 20px);
 
     /* Отступы */
     padding: clamp(24px, 4vh, 48px) clamp(20px, 3vw, 40px);
@@ -221,7 +220,7 @@
     border-radius: 2px;
     color: #ffffff;
     font-size: clamp(12px, 8.25px + 0.75vw, 24px);
-
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;

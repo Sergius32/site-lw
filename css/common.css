@@ -121,7 +121,7 @@
     border: 1px solid var(--border-color);
     border-radius: 2px;
     color: var(--accent-color);
-    font-size: clamp(16px, 1.8vw, 20px);
+    font-size: clamp(12px, 10.5px + 0.46875vw, 18px);
     font-weight: bold;
     font-family: var(--font-secondary);
     cursor: pointer;
