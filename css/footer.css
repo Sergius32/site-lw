@@ -161,11 +161,15 @@
     opacity: 0.7;
     box-shadow: 0 6px 20px rgba(208, 190, 162, 0.4);
 }
-
+.footer__bottom{
+    display: flex;
+    justify-content: center;
+}
 .footer__bottom-container {
     display: flex;
     flex-direction: row;
     width: 100%;
+    max-width: 1920px;
 }
 
 .footer__license {

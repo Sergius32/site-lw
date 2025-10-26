@@ -64,7 +64,7 @@
     transition: color 0.3s ease;
 }
 
-.header__list a:hover {
+.header__list a:hover, .header__lang:hover, .footer__support a:hover {
     color: #ffffff !important;
 }
 
@@ -198,7 +198,6 @@
     color: rgba(244, 177, 74, 1);
     text-align: center;
     margin: 0;
-    max-width: 80%;
 }
 
 .header__description {

@@ -111,8 +111,8 @@
 
 /* Общие стили для кнопок */
 .button {
-    width: clamp(150px, 10vw, 200px);
-    height: var(--button-height);
+    width: clamp(120px, 104px + 5vw, 200px);
+    height: clamp(36px, 34.2px + 0.5625vw, 45px);
     flex-shrink: 0;
     box-sizing: border-box;
     background: linear-gradient(90deg,
