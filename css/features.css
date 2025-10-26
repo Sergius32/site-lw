@@ -1,9 +1,10 @@
 /* Секция "Что тебя ждёт на сервере" */
 .features {
-  padding: clamp(60px, 8vh, 120px) clamp(20px, 5vw, 120px) 0;
+  padding: clamp(40px, 8vh, 120px) clamp(20px, 5vw, 120px) 0;
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-top: 5%;
 }
 
 .features__container {
@@ -40,11 +41,26 @@
   position: relative;
   /* ← обязательно! */
   overflow: hidden;
+  /* Высота теперь по содержимому — за счёт position: absolute + bottom: 0 */
+  border-radius: 2px;
 }
 
 .features__image {
+  position: relative;
   display: block;
   width: 100%;
+}
+
+.features__image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180.00deg, rgba(27, 26, 31, 0) 50%, rgba(27, 26, 31, 1) 100%);
+  pointer-events: none;
+  /* чтобы не мешать кликам */
 }
 
 .features__img {
@@ -60,7 +76,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: clamp(10px, 1.8vh, 22px) clamp(10px, 2vw, 18px);
+  padding: 5vh 1vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -70,7 +86,6 @@
   box-sizing: border-box;
   z-index: 2;
   background: linear-gradient(90.00deg, rgba(15.513128280639648, 15.100545883178711, 17.163461685180664, 0), rgba(15.513128280639648, 15.100545883178711, 17.163461685180664, 1) 48%, rgba(16, 15, 17, 0) 100%);
-  /* Высота теперь по содержимому — за счёт position: absolute + bottom: 0 */
 }
 
 /* Полоски сверху и снизу */
@@ -96,7 +111,7 @@
 }
 
 .features__card-title {
-  font-size: clamp(10px, 5.6px + 1.375vw, 32px);
+  font-size: clamp(12px, 5.6px + 1.375vw, 32px);
   color: rgba(229, 190, 127, 1);
   line-height: 1.2;
   position: relative;
@@ -105,11 +120,23 @@
 }
 
 .features__card-description {
-  font-size: clamp(8px, 3.2px + 1.0vw, 24px);
+  font-size: clamp(10px, 3.2px + 1.0vw, 24px);
   color: rgba(157, 144, 124, 1);
   margin: 0;
   line-height: 1.4;
   position: relative;
   z-index: 3;
-  font-family: "Gabriela", serif;
+  font-family: "Inter", sans-serif;
+}
+
+@media (max-width: 480px) {
+  .features__img {
+    width: auto;
+    height: auto;
+  }
+}
+@media (max-width: 320px){
+  .features__content{
+    padding: 1vh 1vh;
+  }
 }

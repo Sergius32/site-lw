@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    flex-direction: column;
 }
 
 .footer__bg {
@@ -118,7 +119,7 @@
 }
 
 .footer__card-title {
-    font-size: clamp(10px, 5.6px + 1.375vw, 32px);
+    font-size: clamp(12px, 5.6px + 1.375vw, 32px);
     color: rgba(229, 190, 127, 1);
     margin: 0 0 clamp(8px, 1vh, 16px) 0;
     line-height: 1.2;
@@ -126,12 +127,12 @@
 }
 
 .footer__card-description {
-    font-size: clamp(8px, 3.2px + 1.0vw, 24px);
+    font-size: clamp(10px, 3.2px + 1.0vw, 24px);
     color: rgba(157, 144, 124, 1);
     margin-bottom: 5%;
     line-height: 1.4;
     text-align: center;
-    font-family: "Gabriela", serif;
+    font-family: "Inter", sans-serif;
 }
 
 .footer__cta-button {
@@ -161,6 +162,52 @@
     box-shadow: 0 6px 20px rgba(208, 190, 162, 0.4);
 }
 
+.footer__bottom-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.footer__license {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    color: rgba(157, 144, 124, 1);
+    line-height: 1.4;
+    font-family: "Inter", sans-serif;
+    padding: 5vh;
+    gap:10px;
+}
+
+.footer__license p {
+    font-size: clamp(10px, 3.2px + 1.0vw, 24px);
+    text-align: center;
+}
+
+.footer__license-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.footer__support {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    padding: 5vh 5vh;
+}
+
+.footer__support a {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(12px, 5.6px + 1.375vw, 32px);
+}
+
 /* Адаптивность */
 
 @media (max-width: 1200px) {
@@ -175,7 +222,15 @@
     }
 
 }
-
+@media (max-width: 900px){
+    .footer__bottom-container{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .footer__license,.footer__support{
+        width: 100%;
+    }
+}
 @media (max-width: 1024px) {
     .footer__bg {
         background-size: auto;

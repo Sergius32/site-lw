@@ -1,6 +1,7 @@
-.underdog-regular {
-  font-family: "Underdog", system-ui;
-  font-weight: 500;
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
   font-style: normal;
 }
 .gabriela-regular {

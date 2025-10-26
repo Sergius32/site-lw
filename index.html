@@ -13,8 +13,11 @@
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#000000">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gabriela&family=gabriela&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gabriela&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="{{template}}/img/favicon_16.png" type="image/x-icon">
     <link rel="stylesheet" href="{{template}}/css/main.css">
     <link rel="stylesheet" href="{{template}}/css/fonts.css">
@@ -35,24 +38,24 @@
                 </a>
                 <div class="header__online">
                     <div class="header__online-icon"></div>
-                    <div class="header__online-text gabriela-regular">{%
+                    <div class="header__online-text inter">
+                        {% for server in getServerAll() %}{%
                         if server.getStatus().getGameServer() %}<span
                             style="color:rgba(87, 215, 80, 1);">Online</span>{%
-                        else %}<span style="color: rgb(249, 12, 12);">Offline</span>{% endif %}</div>
-                    <div class="header__online-text gabriela-regular">{{ server.getStatus().getOnline() }}</div>
+                        else %}<span style="color: rgb(249, 12, 12);">Offline</span>{% endif %}{% endfor %}</div>
+                    <div class="header__online-text inter"><span style="color:rgba(87, 215, 80, 1);">{% for
+                            server in getServerAll() %} {{ server.getStatus().getOnline() }} {% endfor %}</span></div>
                 </div>
                 <ul class="header__list">
                     <li><a href="https://legend-world.online/signup" data-i18n="header.register"
-                            class="gabriela-regular">Loading...</a></li>
-                    <li><a href="#footer" data-i18n="header.files" class="gabriela-regular">Loading...</a></li>
-                    <li><a href="#!" data-i18n="header.description" class="gabriela-regular">Loading...</a></li>
+                            class="inter">Loading...</a></li>
+                    <li><a href="#footer" data-i18n="header.files" class="inter">Loading...</a></li>
+                    <li><a href="#!" data-i18n="header.description" class="inter">Loading...</a></li>
                     <li><a href="https://legend-world.online/balance" data-i18n="header.donate"
-                            class="gabriela-regular">Loading...</a></li>
+                            class="inter">Loading...</a></li>
                 </ul>
-                <a href="#" id="lang-toggle" class="header__lang gabriela-regular"
-                    data-i18n="header.language">Loading...</a>
-                <a href="https://legend-world.online/main" data-i18n="header.lk"
-                    class="header__button gabriela-regular">Loading...</a>
+                <a href="#" id="lang-toggle" class="header__lang inter" data-i18n="header.language">Loading...</a>
+                <a href="https://legend-world.online/main" data-i18n="header.lk" class="button button-lk">Loading...</a>
                 <button class="mobile-menu-toggle" id="mobile-menu-toggle">☰</button>
             </nav>
 
@@ -61,15 +64,14 @@
                 <button class="mobile-menu__close" id="mobile-menu-close">×</button>
                 <ul class="mobile-menu__list">
                     <li><a href="https://legend-world.online/signup" data-i18n="header.register"
-                            class="gabriela-regular">Loading...</a></li>
-                    <li><a href="#footer" data-i18n="header.files" class="gabriela-regular">Loading...</a></li>
-                    <li><a href="#!" data-i18n="header.description" class="gabriela-regular">Loading...</a></li>
+                            class="inter">Loading...</a></li>
+                    <li><a href="#footer" data-i18n="header.files" class="inter">Loading...</a></li>
+                    <li><a href="#!" data-i18n="header.description" class="inter">Loading...</a></li>
                     <li><a href="https://legend-world.online/balance" data-i18n="header.donate"
-                            class="gabriela-regular">Loading...</a></li>
-                    <li><a href="#" id="lang-toggle-mobile" data-i18n="header.language"
-                            class="header__lang gabriela-regular"></a></li>
-                    <li><a href="https://legend-world.online/main" data-i18n="header.lk"
-                            class="header__button gabriela-regular">Loading...</a></li>
+                            class="inter">Loading...</a></li>
+                    <li><a href="#" id="lang-toggle-mobile" data-i18n="header.language" class="inter"></a></li>
+                    <li><a href="https://legend-world.online/main" data-i18n="header.lk" class="inter">Loading...</a>
+                    </li>
                 </ul>
             </div>
 
@@ -82,7 +84,7 @@
                     <p data-i18n="header.launch_date" class="header__open gabriela-regular">ОТКРЫТИЕ 1 ДЕКАБРЯ В 20:00
                     </p>
                     <p data-i18n="header.subtitle" class="header__description gabriela-regular">Interlude x1200</p>
-                    <a href="#footer" data-i18n="header.cta_button" class="header__cta-button gabriela-regular">Начать
+                    <a href="#footer" data-i18n="header.cta_button" class="header__cta-button inter">Начать
                         играть</a>
                 </div>
             </div>
@@ -185,7 +187,28 @@
             </div>
         </div>
     </footer>
-
+    <section class="footer__bottom">
+        <div class="footer__bottom-container">
+            <div class="footer__license">
+                <div class="footer__license-img">
+                <img src="{{template}}/img/321.gif">
+                <img src="{{template}}/img/321.gif">
+                <img src="{{template}}/img/321.gif">
+                <img src="{{template}}/img/321.gif">
+                </div>
+                <p data-i18n="footer.license.l2">THIS SERVER IS A TEST VERSION OF LINEAGE II AND IS INTENDED ONLY TO KNOW PLAYERS. ALL RIGHTS RESERVED
+                    BY NCSOFT.</p>
+                <p data-i18n="footer.license.lw">© 2025 Game portal Legend-World.online</p>
+            </div>
+            <div class="footer__support">
+                <ul>
+                    <li><a data-i18n="footer.menu.terms" href="https://legend-world.online/page/1">Пользовательское соглашение</a></li>
+                    <li><a data-i18n="footer.menu.politicy" href="https://legend-world.online/page/1">Политика конфиденциальности</a></li>
+                    <li><a data-i18n="footer.menu.support" href="https://legend-world.online/support">Техническая поддержка</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
     <script>
         window.templatePath = "{{template}}";
     </script>

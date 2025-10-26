@@ -5,7 +5,7 @@
     "files": "Files",
     "description": "Description",
     "donate": "Donate",
-    "language": "Language",
+    "language": "En",
     "lk": "Account",
     "launch_date": "LAUNCHING DECEMBER 1 AT 8:00 PM",
     "subtitle": "Interlude x1200",
@@ -48,6 +48,15 @@
       "title": "Launch the Game",
       "description": "*Before launching, check for updates via launcher.exe",
       "support": "Support"
+    },
+    "license": {
+      "l2": "THIS SERVER IS A TEST VERSION OF LINEAGE II AND IS INTENDED ONLY TO KNOW PLAYERS. ALL RIGHTS RESERVED BY NCSOFT.",
+      "lw": "© 2025 Game portal Legend-World.online"
+    },
+    "menu": {
+      "terms": "Terms of Use",
+      "politicy": "Privacy Policy",
+      "support": "Technical Support"
     }
   }
 }
