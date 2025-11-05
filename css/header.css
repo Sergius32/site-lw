@@ -78,7 +78,6 @@
 }
 
 .header__online-icon {
-    background-image: url("../img/Ellipse_1_72.webp");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -86,7 +85,13 @@
     width: 24px;
     height: 24px;
 }
+.header__online-icon.online {
+  background-image: url("../img/Ellipse_1_72.webp");
+}
 
+.header__online-icon.offline {
+  background-image: url("../img/Ellipse_1_73.webp");
+}
 .header__online-text {
     margin: 0 10px;
 }

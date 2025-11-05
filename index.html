@@ -37,20 +37,28 @@
                     <div class="header__logo"></div>
                 </a>
                 <div class="header__online">
-                    <div class="header__online-icon"></div>
+                    {% for server in getServerAll() %}
+                    <div
+                        class="header__online-icon {% if server.getStatus().getGameServer() %}online{% else %}offline{% endif %}">
+                    </div>
+                    {% endfor %}
                     <div class="header__online-text inter">
                         {% for server in getServerAll() %}{%
                         if server.getStatus().getGameServer() %}<span
                             style="color:rgba(87, 215, 80, 1);">Online</span>{%
-                        else %}<span style="color: rgb(249, 12, 12);">Offline</span>{% endif %}{% endfor %}</div>
-                    <div class="header__online-text inter"><span style="color:rgba(87, 215, 80, 1);">{% for
-                            server in getServerAll() %} {{ server.getStatus().getOnline() }} {% endfor %}</span></div>
+                        else %}<span style="color: rgb(249, 12, 12);">Offline</span>{% endif %}{% endfor %}
+                    </div>
+                    <div class="header__online-text inter">
+                        <span style="color:rgba(87, 215, 80, 1);">
+                            {% for server in getServerAll() %} {{ server.getStatus().getOnline() }} {% endfor %}
+                        </span>
+                    </div>
                 </div>
                 <ul class="header__list">
                     <li><a href="https://legend-world.online/signup" data-i18n="header.register"
                             class="inter">Loading...</a></li>
                     <li><a href="#footer" data-i18n="header.files" class="inter">Loading...</a></li>
-                    <li><a href="#!" data-i18n="header.description" class="inter">Loading...</a></li>
+                    <li><a href="https://legend-world.online/forum-l2/d/1-podrobnoe-opisanie-servera" data-i18n="header.description" class="inter">Loading...</a></li>
                     <li><a href="https://legend-world.online/balance" data-i18n="header.donate"
                             class="inter">Loading...</a></li>
                 </ul>
@@ -66,7 +74,7 @@
                     <li><a href="https://legend-world.online/signup" data-i18n="header.register"
                             class="inter">Loading...</a></li>
                     <li><a href="#footer" data-i18n="header.files" class="inter">Loading...</a></li>
-                    <li><a href="#!" data-i18n="header.description" class="inter">Loading...</a></li>
+                    <li><a href="https://legend-world.online/forum-l2/d/1-podrobnoe-opisanie-servera" data-i18n="header.description" class="inter">Loading...</a></li>
                     <li><a href="https://legend-world.online/balance" data-i18n="header.donate"
                             class="inter">Loading...</a></li>
                     <li><a href="https://legend-world.online/main" data-i18n="header.lk" class="inter">Loading...</a>
