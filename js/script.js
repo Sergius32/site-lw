@@ -33,19 +33,34 @@ document.addEventListener('DOMContentLoaded', async () => {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const nestedTranslations = await response.json();
-      return flattenObject(nestedTranslations);
+      // Возвращаем как вложенный объект, так и плоский
+      return {
+        nested: nestedTranslations,
+        flat: flattenObject(nestedTranslations)
+      };
     } catch (err) {
       console.error(`Failed to load translations for language "${lang}":`, err);
-      return {};
+      return { nested: {}, flat: {} };
     }
   }
 
-  // Применение переводов ко всем элементам с data-i18n
+  // Применение переводов ко всем элементам с data-i18n и data-i18n-href-key
   function applyTranslations(translations) {
+    const { flat: flatTranslations, nested: nestedTranslations } = translations;
+
+    // Применение текста
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
-      if (key && translations.hasOwnProperty(key)) {
-        el.textContent = translations[key];
+      if (key && flatTranslations.hasOwnProperty(key)) {
+        el.textContent = flatTranslations[key];
+      }
+    });
+
+    // Применение href
+    document.querySelectorAll('[data-i18n-href-key]').forEach(el => {
+      const hrefKey = el.getAttribute('data-i18n-href-key');
+      if (hrefKey && flatTranslations.hasOwnProperty(hrefKey)) {
+        el.href = flatTranslations[hrefKey];
       }
     });
   }

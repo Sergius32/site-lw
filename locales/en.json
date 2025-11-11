@@ -3,7 +3,10 @@
     "online": "Online:",
     "register": "Register",
     "files": "Files",
-    "description": "Description",
+    "description": {
+      "text": "Description",
+      "href": "https://legend-world.online/forum-l2/d/3-detailed-description-of-the-server-eng/"
+    },
     "forum": "Forum",
     "language": "En",
     "lk": "Account",

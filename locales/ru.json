@@ -3,7 +3,10 @@
     "online": "Онлайн:",
     "register": "Регистрация",
     "files": "Файлы",
-    "description": "Описание",
+    "description": {
+      "text": "Описание",
+      "href": "https://legend-world.online/forum-l2/d/1-podrobnoe-opisanie-servera-rus/"
+    },
     "forum": "Форум",
     "language": "Ru",
     "lk": "Личный кабинет",
