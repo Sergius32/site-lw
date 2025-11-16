@@ -6,13 +6,6 @@
     font-display: swap; /* чтобы текст не был невидим при загрузке */
 }
 @font-face {
-    font-family: 'Reaver-SemiBold';
-    src: url('../css/Reaver-SemiBold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap; /* чтобы текст не был невидим при загрузке */
-}
-@font-face {
     font-family: 'Radiance';
     src: url('../css/radiance.woff') format('woff');
     font-weight: normal;
@@ -27,7 +20,7 @@
   text-transform: uppercase;
 }
 .inter {
-  font-family: "Reaver-SemiBold";
+  font-family: "Reaver-Bold";
   font-weight: 100;
   font-style: normal;
   letter-spacing: 2px;
