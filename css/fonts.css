@@ -1,11 +1,34 @@
-.inter {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+@font-face {
+    font-family: 'Reaver-Bold';
+    src: url('../css/Reaver-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* чтобы текст не был невидим при загрузке */
+}
+@font-face {
+    font-family: 'Reaver-SemiBold';
+    src: url('../css/Reaver-SemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* чтобы текст не был невидим при загрузке */
+}
+@font-face {
+    font-family: 'Radiance';
+    src: url('../css/radiance.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* чтобы текст не был невидим при загрузке */
 }
 .gabriela-regular {
-  font-family: "Gabriela", serif;
-  font-weight: 700;
+  font-family: "Reaver-Bold";
+  font-optical-sizing: auto;
+  font-weight: 100;
   font-style: normal;
+  text-transform: uppercase;
+}
+.inter {
+  font-family: "Reaver-SemiBold";
+  font-weight: 100;
+  font-style: normal;
+  letter-spacing: 2px;
 }

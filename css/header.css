@@ -58,6 +58,10 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    font-family: "Reaver-Bold", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .header__list a {
@@ -223,13 +227,13 @@
     border: 1px solid rgba(208, 190, 162, 1);
     border-radius: 2px;
     color: #ffffff;
-    font-size: clamp(12px, 8.25px + 0.75vw, 24px);
+    font-size: clamp(10px, 8.25px + 0.75vw, 18px);
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    margin-top: clamp(16px, 6.4px + 3vw, 64px);
+    margin-top: clamp(16px, 6.4px + 3vw, 24px);
     cursor: pointer;
     transition: all 0.3s ease;
 }

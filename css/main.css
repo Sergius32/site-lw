@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    font-size: clamp(20px, 1.5vw, 26px);
     color: rgba(208, 190, 162, 1);
 }
 

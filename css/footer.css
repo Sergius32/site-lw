@@ -119,11 +119,13 @@
 }
 
 .footer__card-title {
-    font-size: clamp(18px, 5.6px + 1.375vw, 32px);
+    font-size: clamp(18px, 5.6px + 1.375vw, 24px);
     color: rgba(229, 190, 127, 1);
     margin: 0 0 clamp(8px, 1vh, 16px) 0;
     line-height: 1.2;
-    font-family: "Gabriela", serif;
+    font-family: "Reaver-Bold", serif;
+    text-transform: uppercase;
+    font-weight: 100;
 }
 
 .footer__card-description {
@@ -132,7 +134,7 @@
     margin-bottom: 5%;
     line-height: 1.4;
     text-align: center;
-    font-family: "Inter", sans-serif;
+    font-family: "Radiance";
 }
 
 .footer__cta-button {
@@ -146,7 +148,7 @@
     color: rgba(229, 190, 127, 1);
     font-size: clamp(16px, 1.8vw, 20px);
     font-weight: bold;
-    font-family: 'Radiance', sans-serif;
+    font-family: 'Reaver-Bold', sans-serif;
     box-sizing: border-box;
 
     /* Эффекты */
@@ -182,7 +184,7 @@
     width: 60vw;
     color: rgba(157, 144, 124, 1);
     line-height: 1.4;
-    font-family: "Inter", sans-serif;
+    font-family: "Radiance";
     padding: 5vh;
     gap: 10px;
 }
@@ -193,6 +195,7 @@
 }
 
 .footer__license-img {
+    z-index: -1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -200,11 +203,13 @@
     flex-wrap: wrap;
 }
 
-.footer__social a{
-    display: inline-block; /* или inline-block */
+.footer__social a {
+    display: inline-block;
+    /* или inline-block */
     width: 32px;
     height: 32px;
-    background-size: contain; /* или cover — по желанию */
+    background-size: contain;
+    /* или cover — по желанию */
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -235,7 +240,7 @@
 }
 
 .footer__support a {
-    font-family: "Inter", sans-serif;
+    font-family: "Radiance";
 }
 
 /* Адаптивность */
@@ -263,6 +268,10 @@
     .footer__support {
         width: 100%;
     }
+        .footer__license{
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -285,6 +294,7 @@
     .footer__title {
         margin-bottom: clamp(40px, 6vh, 80px);
     }
+    
 }
 
 @media (max-width: 480px) {
@@ -306,7 +316,6 @@
     .footer__container {
         padding: 0 5px;
     }
-
 }
 
 @media (max-width: 320px) {
