@@ -267,7 +267,8 @@
     .footer__support {
         width: 100%;
     }
-        .footer__license{
+
+    .footer__license {
         display: flex;
         flex-direction: column-reverse;
     }
@@ -293,10 +294,18 @@
     .footer__title {
         margin-bottom: clamp(40px, 6vh, 80px);
     }
-    
+
 }
 
 @media (max-width: 480px) {
+
+    .gabriela-regular,
+    .inter {
+        font-family: 'Gabriela';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+    }
 
     .footer__bg {
         padding: clamp(40px, 5vh, 80px) clamp(15px, 2vw, 30px) 0;
