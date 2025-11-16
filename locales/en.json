@@ -31,6 +31,10 @@
     "fun": {
       "title": "Comfortable Gameplay & Endless Fun",
       "description": "Stable server, high population, various events, and personal tournaments to keep you entertained"
+    },
+    "pvp": {
+      "title": "Automatic 1x1 PvP Tournament",
+      "description": "Single-elimination tournament with no second chances: all skills are reset, enchantment capped at +6, 1-minute preparation time with full buffs. Winner is determined by damage dealt in case of a tie. Top 3 places rewarded with Coin of Luck."
     }
   },
   "footer": {
