@@ -201,7 +201,16 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
-
+.footer__social{
+    position:fixed;
+    bottom: 0;
+    left:0;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
 .footer__social a {
     display: inline-block;
     /* или inline-block */
@@ -211,6 +220,10 @@
     /* или cover — по желанию */
     background-repeat: no-repeat;
     background-position: center;
+    opacity: 0.5;   
+}
+.footer__social a:hover {
+    opacity: 0.9;
 }
 
 .footer__social_vk {
