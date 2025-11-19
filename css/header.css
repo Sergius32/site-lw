@@ -68,7 +68,9 @@
     transition: color 0.3s ease;
 }
 
-.header__list a:hover, .header__lang:hover, .footer__support a:hover {
+.header__list a:hover,
+.header__lang:hover,
+.footer__support a:hover {
     color: #ffffff !important;
 }
 
@@ -89,13 +91,15 @@
     width: 24px;
     height: 24px;
 }
+
 .header__online-icon.online {
-  background-image: url("../img/Ellipse_1_72.webp");
+    background-image: url("../img/Ellipse_1_72.webp");
 }
 
 .header__online-icon.offline {
-  background-image: url("../img/Ellipse_1_73.webp");
+    background-image: url("../img/Ellipse_1_73.webp");
 }
+
 .header__online-text {
     margin: 0 10px;
 }
@@ -258,6 +262,10 @@
         background-position: center top, center top;
         min-height: calc(1200px * 1039 / 1920);
     }
+
+    .header__nav {
+        padding: 0px 0px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -269,12 +277,13 @@
 }
 
 /* Адаптивность для центрального блока */
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
 
     .header__logo-svg {
         width: clamp(300px, 45vw, 600px);
     }
-    .header__logo{
+
+    .header__logo {
         display: none;
     }
 }
@@ -289,7 +298,8 @@
     .header__logo-svg {
         width: clamp(250px, 40vw, 500px);
     }
-    .button-lk{
+
+    .button-lk {
         display: none;
     }
 }
@@ -306,10 +316,19 @@
     }
 }
 
+@media (max-width: 1400px) {
+    .header__nav a {
+        font-size: 12px;
+    }
+
+    .header__online span {
+        font-size: 12px;
+    }
+}
+
 @media (max-width: 1450px) {
     .header__nav {
         height: 80px;
-        padding: 0 clamp(15px, 4%, 120px);
     }
 
     .header__logo {
@@ -329,6 +348,7 @@
         padding: 12px 24px;
         font-size: 18px;
     }
+
 }
 
 /* Мобильная навигация */
@@ -379,11 +399,13 @@
         height: auto;
     }
 }
+
 @media (max-width: 426px) {
     .header__content {
         margin-top: 20%;
     }
 }
+
 @media (max-width: 320px) {
     .header__content {
         margin-top: 30%;
