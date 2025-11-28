@@ -68,6 +68,11 @@
     transition: color 0.3s ease;
 }
 
+.header__lang {
+    color: rgb(216, 216, 216);
+    font-size: 14px
+}
+
 .header__list a:hover,
 .header__lang:hover,
 .footer__support a:hover {

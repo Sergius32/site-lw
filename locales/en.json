@@ -1,6 +1,7 @@
 {
   "header": {
     "online": "Online:",
+    "openingDate": "12 DECEMBER - 20:00",
     "register": "Register",
     "files": "Files",
     "description": {
@@ -8,7 +9,7 @@
       "href": "https://legend-world.online/forum-l2/d/3-detailed-description-of-the-server-eng/"
     },
     "forum": "Forum",
-    "language": "En",
+    "language": "РУС",
     "lk": "Account",
     "launch_date": "OBT DECEMBER 3 AT 8:00 PM UTC +3",
     "subtitle": "Interlude x1200",
