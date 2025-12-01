@@ -124,3 +124,34 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   });
 });
+
+// Открытие модалок
+document.querySelector('.footer__buttons-container a:nth-child(1)').addEventListener('click', (e) => {
+  e.preventDefault();
+  document.getElementById('modal-launcher').style.display = 'block';
+});
+
+document.querySelector('.footer__buttons-container a:nth-child(2)').addEventListener('click', (e) => {
+  e.preventDefault();
+  document.getElementById('modal-patch').style.display = 'block';
+});
+
+// У кнопки "Клиент" уже есть href — заменим поведение
+document.querySelector('.footer__buttons-container a:nth-child(3)').addEventListener('click', (e) => {
+  e.preventDefault();
+  document.getElementById('modal-client').style.display = 'block';
+});
+
+// Закрытие по крестику
+document.querySelectorAll('.modal__close').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.closest('.modal').style.display = 'none';
+  });
+});
+
+// Закрытие по клику на затемнение
+document.querySelectorAll('.modal__overlay').forEach(overlay => {
+  overlay.addEventListener('click', () => {
+    overlay.closest('.modal').style.display = 'none';
+  });
+});

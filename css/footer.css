@@ -201,10 +201,11 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
-.footer__social{
-    position:fixed;
+
+.footer__social {
+    position: fixed;
     bottom: 0;
-    left:0;
+    left: 0;
     margin-left: 5px;
     margin-bottom: 5px;
     gap: 5px;
@@ -212,6 +213,7 @@
     flex-direction: column;
     z-index: 99999;
 }
+
 .footer__social a {
     display: inline-block;
     /* или inline-block */
@@ -221,8 +223,9 @@
     /* или cover — по желанию */
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.5;   
+    opacity: 0.5;
 }
+
 .footer__social a:hover {
     opacity: 0.9;
 }
@@ -254,6 +257,101 @@
 
 .footer__support a {
     font-family: "Radiance";
+}
+
+/* Общие стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    /* затемнение */
+}
+
+.modal__content {
+    position: relative;
+    background: linear-gradient(90deg,
+            rgba(15.51, 15.10, 17.16, 0) 0%,
+            rgba(15.51, 15.10, 17.16, 1) 48%,
+            rgba(16, 15, 17, 0) 100%);
+    background-color: black;
+    border-radius: 10px;
+    padding: 24px;
+    max-width: 500px;
+    width: 90%;
+    margin: 40vh auto;
+    z-index: 1001;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal__content::before,
+.modal__content::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+            rgba(208, 190, 162, 0) 0%,
+            rgba(208, 190, 162, 1) 48%,
+            rgba(208, 190, 162, 0) 100%);
+}
+
+.modal__content::before {
+    top: 0;
+}
+
+.modal__content::after {
+    bottom: 0;
+}
+
+.modal__close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+}
+
+.modal__close:hover {
+    color: #333;
+}
+
+.modal__links {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0;
+}
+
+.modal__links li {
+    margin: 8px 0;
+}
+
+.modal__links a {
+    font-family: "Reaver-Bold", sans-serif;
+    color: rgba(208, 190, 162, 1);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.modal__links a:hover {
+    text-decoration: underline;
 }
 
 /* Адаптивность */
@@ -312,14 +410,15 @@
 }
 
 @media (max-width: 480px) {
-    .footer__social{
+    .footer__social {
         left: 0;
         bottom: unset;
         top: 0;
         margin-left: 20px;
-        margin-top:9px;
+        margin-top: 9px;
         flex-direction: row;
     }
+
     .footer__bg {
         padding: clamp(40px, 5vh, 80px) clamp(15px, 2vw, 30px) 0;
         min-height: 600px;
