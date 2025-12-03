@@ -11,7 +11,7 @@
     "forum": "Форум",
     "language": "ENG",
     "lk": "Личный кабинет",
-    "launch_date": "ОБТ 3 ДЕКАБРЯ В 20:00 UTC +3",
+    "launch_date": "ОТКРЫТИЕ 12 ДЕКАБРЯ В 20:00 UTC +3",
     "subtitle": "Interlude x1200",
     "cta_button": "Начать играть",
     "help": "Помощь"
@@ -51,7 +51,10 @@
       "description": "Выбери наиболее удобный способ",
       "launcher": "Лаунчер",
       "patch": "Патч",
-      "client": "Клиент"
+      "client": "Клиент",
+      "launcher_title": "Скачать Лаунчер",
+      "path_title": "Скачать Патч",
+      "client_title": "Скачать Клиент"
     },
     "launch": {
       "title": "Запусти игру",
