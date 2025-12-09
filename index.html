@@ -47,6 +47,16 @@
                     <div class="header__logo"></div>
                 </a>
                 <div class="header__online">
+                    <div class="header__online-icon countdown"></div>
+                    <div class="header__online-text inter">
+                        <span style="color:rgba(255, 165, 0, 1);" id="countdown-timer">
+                        </span>
+                    </div>
+                    <div class="header__online-text inter">
+                        <span style="color:rgba(255, 165, 0, 1);"></span>
+                    </div>
+                </div>
+                <!-- <div class="header__online">
                     {% for server in getServerAll() %}
                     <div
                         class="header__online-icon {% if server.getStatus().getGameServer() %}online{% else %}offline{% endif %}">
@@ -63,7 +73,7 @@
                             {% for server in getServerAll() %} {{ server.getStatus().getOnline() }} {% endfor %}
                         </span>
                     </div>
-                </div>
+                </div> -->
                 <ul class="header__list">
                     <li><a href="https://legend-world.online/signup" data-i18n="header.register">Loading...</a></li>
                     <li><a href="#footer" data-i18n="header.files">Loading...</a></li>
@@ -195,7 +205,8 @@
                             <p data-i18n="footer.download.description" class="footer__card-description">Выбери наиболее
                                 удобный способ</p>
                             <div class="footer__buttons-container">
-                                <a href="https://legend-world.online/uploads/launcher.zip" data-i18n="footer.download.launcher" class="button">Лаунчер</a>
+                                <a href="https://legend-world.online/uploads/launcher.zip"
+                                    data-i18n="footer.download.launcher" class="button">Лаунчер</a>
                                 <a href="#!" data-i18n="footer.download.patch" class="button">Патч</a>
                                 <a href="https://disk.yandex.ru/d/f8nu1jlPGO0Rxw" target="_blank"
                                     data-i18n="footer.download.client" class="button">Клиент</a>
@@ -288,7 +299,7 @@
             </div>
         </div>
     </section>
-     <!-- Модальное окно: Лаунчер -->
+    <!-- Модальное окно: Лаунчер -->
     <div id="modal-launcher" class="modal">
         <div class="modal__overlay"></div>
         <div class="modal__content">
@@ -297,7 +308,8 @@
             <ul class="modal__links">
                 <li><a class="button" href="https://legend-world.online/Launcher_LW.exe" target="_blank">Site</a></li>
                 <li><a class="button" href="https://disk.yandex.ru/d/kBuaC4JEpUXQFA" target="_blank">Yandex</a></li>
-                <li><a class="button" href="https://mega.nz/file/71oXgL6J#7nuU8DAAhAcUGmv6Uy3oWly4Etc2foW7xpz0iU3GTEU" target="_blank">MEGA</a></li>
+                <li><a class="button" href="https://mega.nz/file/71oXgL6J#7nuU8DAAhAcUGmv6Uy3oWly4Etc2foW7xpz0iU3GTEU"
+                        target="_blank">MEGA</a></li>
             </ul>
         </div>
     </div>
@@ -323,7 +335,8 @@
             <h4 class="footer__card-title" data-i18n="footer.download.client_title">Скачать чистый клиент</h4>
             <ul class="modal__links">
                 <li><a class="button" href="https://disk.yandex.ru/d/qIyDe2Cce_fnfA" target="_blank">Yandex</a></li>
-                <li><a class="button" href="https://mega.nz/file/WgZUlZ4D#wUko_GWaTqmlnyipFNtxvQHlHqbYP0jXXDe-bg8nmO4" target="_blank">MEGA</a></li>
+                <li><a class="button" href="https://mega.nz/file/WgZUlZ4D#wUko_GWaTqmlnyipFNtxvQHlHqbYP0jXXDe-bg8nmO4"
+                        target="_blank">MEGA</a></li>
             </ul>
         </div>
     </div>
@@ -334,9 +347,10 @@
             <span class="modal__close">&times;</span>
 
             <div class="modal__body">
-               
 
-                <h2 class="modal__title footer__card-title" data-i18n="telegram.popup.title">Присоединяйтесь к нашей группе!</h2>
+
+                <h2 class="modal__title footer__card-title" data-i18n="telegram.popup.title">Присоединяйтесь к нашей
+                    группе!</h2>
                 <p class="modal__text footer__card-description" data-i18n="telegram.popup.description">
                     Получайте последние новости, обновления и эксклюзивный контент в нашей Telegram группе.
                 </p>
@@ -354,6 +368,7 @@
             </div>
         </div>
     </div>
+
     <script>
         window.templatePath = "{{template}}";
     </script>

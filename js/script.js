@@ -176,3 +176,119 @@ document.querySelectorAll('.modal__overlay').forEach(overlay => {
     overlay.closest('.modal').style.display = 'none';
   });
 });
+// Обратный отсчёт до старта с поддержкой переводов
+function initCountdown() {
+  // Дата запуска: 12.12.2025 20:00 UTC+3
+  const launchDate = new Date('2025-12-12T17:00:00Z'); // 20:00 UTC+3 = 17:00 UTC
+  
+  const onlineContainer = document.querySelector('.header__online');
+  
+  // Функция для получения текущего языка
+  function getCurrentLang() {
+    return localStorage.getItem('lang') || 'ru';
+  }
+  
+  // Переводы для времени
+  const timeTranslations = {
+    ru: {
+      beforeStart: 'До старта:',
+      online: 'Online',
+      days: 'д',
+      hours: 'ч',
+      minutes: 'м',
+      seconds: 'с'
+    },
+    en: {
+      beforeStart: 'Starts in:',
+      online: 'Online',
+      days: 'd',
+      hours: 'h',
+      minutes: 'm',
+      seconds: 's'
+    }
+  };
+  
+  function updateCountdown() {
+    const now = new Date();
+    const difference = launchDate - now;
+    const lang = getCurrentLang();
+    const t = timeTranslations[lang] || timeTranslations.ru;
+    
+    // Если время пришло - показываем Online
+    if (difference <= 0) {
+      onlineContainer.innerHTML = `
+        <div class="header__online-icon online"></div>
+        <div class="header__online-text inter">
+          <span style="color:rgba(87, 215, 80, 1);" data-i18n="countdown.online">${t.online}</span>
+        </div>
+        <div class="header__online-text inter">
+          <span style="color:rgba(87, 215, 80, 1);">365</span>
+        </div>
+      `;
+      clearInterval(countdownInterval);
+      return;
+    }
+    
+    // Вычисляем дни, часы, минуты, секунды
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+    
+    // Форматируем текст с учётом языка
+    let countdownText = '';
+    if (days > 0) {
+      countdownText = `${days}${t.days} ${hours}${t.hours} ${minutes}${t.minutes} ${seconds}${t.seconds}`;
+    } else if (hours > 0) {
+      countdownText = `${hours}${t.hours} ${minutes}${t.minutes} ${seconds}${t.seconds}`;
+    } else if (minutes > 0) {
+      countdownText = `${minutes}${t.minutes} ${seconds}${t.seconds}`;
+    } else {
+      countdownText = `${seconds}${t.seconds}`;
+    }
+    
+    // Обновляем HTML для обратного отсчёта (без иконки)
+    onlineContainer.innerHTML = `
+      <div class="header__online-text inter">
+        <span style="color: rgba(244, 177, 74, 1);" data-i18n="countdown.beforeStart">${t.beforeStart}</span>
+      </div>
+      <div class="header__online-text inter">
+        <span style="color:rgba(87, 215, 80, 1);">${countdownText}</span>
+      </div>
+    `;
+  }
+  
+  // Запускаем обновление каждую секунду
+  updateCountdown();
+  const countdownInterval = setInterval(updateCountdown, 1000);
+  
+  // Слушаем изменение языка
+  window.addEventListener('storage', (e) => {
+    if (e.key === 'lang') {
+      updateCountdown();
+    }
+  });
+  
+  // Также слушаем клики по кнопкам переключения языка
+  const langToggle = document.getElementById('lang-toggle');
+  const langToggleMobile = document.getElementById('lang-toggle-mobile');
+  
+  if (langToggle) {
+    langToggle.addEventListener('click', () => {
+      setTimeout(updateCountdown, 100);
+    });
+  }
+  
+  if (langToggleMobile) {
+    langToggleMobile.addEventListener('click', () => {
+      setTimeout(updateCountdown, 100);
+    });
+  }
+}
+
+// Запускаем после загрузки DOM
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initCountdown);
+} else {
+  initCountdown();
+}
