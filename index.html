@@ -327,6 +327,33 @@
             </ul>
         </div>
     </div>
+    <!-- Модальное окно Telegram -->
+    <div id="modal-telegram-auto" class="modal" style="display: none;">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <span class="modal__close">&times;</span>
+
+            <div class="modal__body">
+               
+
+                <h2 class="modal__title footer__card-title" data-i18n="telegram.popup.title">Присоединяйтесь к нашей группе!</h2>
+                <p class="modal__text footer__card-description" data-i18n="telegram.popup.description">
+                    Получайте последние новости, обновления и эксклюзивный контент в нашей Telegram группе.
+                </p>
+
+                <a href="https://t.me/legend_world_l2" target="_blank" class="telegram-button gabriela-regular"
+                    data-i18n="telegram.popup.button">
+                    Присоединиться
+                </a>
+
+                <button class="telegram-close-text"
+                    onclick="document.getElementById('modal-telegram-auto').style.display='none'"
+                    data-i18n="telegram.popup.later">
+                    Может быть позже
+                </button>
+            </div>
+        </div>
+    </div>
     <script>
         window.templatePath = "{{template}}";
     </script>

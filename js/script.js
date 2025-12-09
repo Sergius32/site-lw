@@ -123,6 +123,27 @@ document.addEventListener('DOMContentLoaded', async () => {
       document.body.style.overflow = '';
     }
   });
+
+  // ============ АВТОМАТИЧЕСКОЕ ВСПЛЫВАЮЩЕЕ ОКНО TELEGRAM ============
+  const TELEGRAM_DELAY = 8000; // Задержка в миллисекундах (3 секунды для отладки)
+  const TELEGRAM_URL = 'https://t.https://t.me/legend_world_l2'; // Замените на вашу ссылку
+  const DEBUG_MODE = true; // Установите false для продакшена
+  
+  // Проверяем, показывали ли уже окно в этой сессии
+  const telegramShown = sessionStorage.getItem('telegramPopupShown');
+  
+  // В режиме отладки показываем всегда, иначе только один раз
+  if (DEBUG_MODE || !telegramShown) {
+    setTimeout(() => {
+      const modal = document.getElementById('modal-telegram-auto');
+      if (modal) {
+        modal.style.display = 'block';
+        if (!DEBUG_MODE) {
+          sessionStorage.setItem('telegramPopupShown', 'true');
+        }
+      }
+    }, TELEGRAM_DELAY);
+  }
 });
 
 // Открытие модалок

@@ -70,5 +70,13 @@
       "politicy": "Privacy Policy",
       "support": "Technical Support"
     }
+  },
+  "telegram": {
+    "popup": {
+      "title": "Join Our Community!",
+      "description": "Get the latest news, updates and exclusive content in our Telegram group.",
+      "button": "Join the Group",
+      "later": "Maybe later"
+    }
   }
 }
