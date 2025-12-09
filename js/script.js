@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // ============ АВТОМАТИЧЕСКОЕ ВСПЛЫВАЮЩЕЕ ОКНО TELEGRAM ============
   const TELEGRAM_DELAY = 8000; // Задержка в миллисекундах (3 секунды для отладки)
   const TELEGRAM_URL = 'https://t.https://t.me/legend_world_l2'; // Замените на вашу ссылку
-  const DEBUG_MODE = true; // Установите false для продакшена
+  const DEBUG_MODE = false; // Установите false для продакшена
 
   // Проверяем, показывали ли уже окно в этой сессии
   const telegramShown = sessionStorage.getItem('telegramPopupShown');
@@ -176,11 +176,12 @@ document.querySelectorAll('.modal__overlay').forEach(overlay => {
     overlay.closest('.modal').style.display = 'none';
   });
 });
+
 // Обратный отсчёт до старта с поддержкой переводов
 function initCountdown() {
   // Дата запуска: 12.12.2025 20:00 UTC+3
   const launchDate = new Date('2025-12-12T17:00:00Z'); // 20:00 UTC+3 = 17:00 UTC
-  
+
   const onlineContainer = document.querySelector('.header__online');
 
   // Функция для получения текущего языка
