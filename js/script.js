@@ -128,10 +128,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   const TELEGRAM_DELAY = 8000; // Задержка в миллисекундах (3 секунды для отладки)
   const TELEGRAM_URL = 'https://t.https://t.me/legend_world_l2'; // Замените на вашу ссылку
   const DEBUG_MODE = true; // Установите false для продакшена
-  
+
   // Проверяем, показывали ли уже окно в этой сессии
   const telegramShown = sessionStorage.getItem('telegramPopupShown');
-  
+
   // В режиме отладки показываем всегда, иначе только один раз
   if (DEBUG_MODE || !telegramShown) {
     setTimeout(() => {
@@ -182,12 +182,12 @@ function initCountdown() {
   const launchDate = new Date('2025-12-12T17:00:00Z'); // 20:00 UTC+3 = 17:00 UTC
   
   const onlineContainer = document.querySelector('.header__online');
-  
+
   // Функция для получения текущего языка
   function getCurrentLang() {
     return localStorage.getItem('lang') || 'ru';
   }
-  
+
   // Переводы для времени
   const timeTranslations = {
     ru: {
@@ -207,13 +207,13 @@ function initCountdown() {
       seconds: 's'
     }
   };
-  
+
   function updateCountdown() {
     const now = new Date();
     const difference = launchDate - now;
     const lang = getCurrentLang();
     const t = timeTranslations[lang] || timeTranslations.ru;
-    
+
     // Если время пришло - показываем Online
     if (difference <= 0) {
       onlineContainer.innerHTML = `
@@ -228,13 +228,13 @@ function initCountdown() {
       clearInterval(countdownInterval);
       return;
     }
-    
+
     // Вычисляем дни, часы, минуты, секунды
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
     const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-    
+
     // Форматируем текст с учётом языка
     let countdownText = '';
     if (days > 0) {
@@ -246,39 +246,41 @@ function initCountdown() {
     } else {
       countdownText = `${seconds}${t.seconds}`;
     }
-    
-    // Обновляем HTML для обратного отсчёта (без иконки)
+
+    // Обновляем HTML для обратного отсчёта в колонку
     onlineContainer.innerHTML = `
-      <div class="header__online-text inter">
-        <span style="color: rgba(244, 177, 74, 1);" data-i18n="countdown.beforeStart">${t.beforeStart}</span>
-      </div>
-      <div class="header__online-text inter">
-        <span style="color:rgba(87, 215, 80, 1);">${countdownText}</span>
+      <div class="header__online-column">
+        <div class="header__online-text gabriela-regular">
+          <span style="color: rgba(244, 177, 74, 1);" data-i18n="countdown.beforeStart">${t.beforeStart}</span>
+        </div>
+        <div class="header__online-text inter">
+          <span style="color:rgba(87, 215, 80, 1);">${countdownText}</span>
+        </div>
       </div>
     `;
   }
-  
+
   // Запускаем обновление каждую секунду
   updateCountdown();
   const countdownInterval = setInterval(updateCountdown, 1000);
-  
+
   // Слушаем изменение языка
   window.addEventListener('storage', (e) => {
     if (e.key === 'lang') {
       updateCountdown();
     }
   });
-  
+
   // Также слушаем клики по кнопкам переключения языка
   const langToggle = document.getElementById('lang-toggle');
   const langToggleMobile = document.getElementById('lang-toggle-mobile');
-  
+
   if (langToggle) {
     langToggle.addEventListener('click', () => {
       setTimeout(updateCountdown, 100);
     });
   }
-  
+
   if (langToggleMobile) {
     langToggleMobile.addEventListener('click', () => {
       setTimeout(updateCountdown, 100);

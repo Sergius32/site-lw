@@ -93,20 +93,44 @@ body {
         font-size: 15px;
     }
 }
+/* Колонка для обратного отсчёта и онлайна */
+.header__online-column {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+}
+
 /* Анимация для зелёной иконки Online */
 .header__online-icon.online {
     background-color: rgba(87, 215, 80, 1);
+    border-radius: 50%; /* Убедитесь, что иконка круглая */
+    position: relative;
+    width: 12px; /* или ваш размер */
+    height: 12px;
+}
+
+.header__online-icon.online::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(87, 215, 80, 0.7);
     animation: pulse-green 2s ease-in-out infinite;
 }
 
 @keyframes pulse-green {
-    0%, 100% {
-        opacity: 1;
+    0% {
         box-shadow: 0 0 0 0 rgba(87, 215, 80, 0.7);
     }
-    50% {
-        opacity: 0.8;
+    70% {
         box-shadow: 0 0 0 8px rgba(87, 215, 80, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(87, 215, 80, 0);
     }
 }
 
