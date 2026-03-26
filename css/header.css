@@ -196,6 +196,21 @@
     bottom: 0;
 }
 
+.header__external-link {
+    position: absolute;
+    left: 0px;
+    bottom: 69px;
+    z-index: 1100;
+    display: block;
+}
+
+.header__external-link img {
+    display: block;
+    width: 122px;
+    height: 31px;
+    border: 0;
+}
+
 .header__logo-main {
     display: flex;
     justify-content: center;
