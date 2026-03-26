@@ -43,6 +43,13 @@
     aspect-ratio: 108 / 52;
 }
 
+.header__logo-link {
+    display: block;
+    /* или inline-block, в зависимости от макета */
+    text-decoration: none;
+    outline: none;
+}
+
 .header__list {
     display: flex;
     flex-direction: row;
@@ -51,13 +58,24 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    font-family: "Reaver-Bold", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .header__list a {
     transition: color 0.3s ease;
 }
 
-.header__list a:hover {
+.header__lang {
+    color: rgb(216, 216, 216);
+    font-size: 14px
+}
+
+.header__list a:hover,
+.header__lang:hover,
+.footer__support a:hover {
     color: #ffffff !important;
 }
 
@@ -71,7 +89,6 @@
 }
 
 .header__online-icon {
-    background-image: url("../img/Ellipse_1_72.webp");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -80,14 +97,21 @@
     height: 24px;
 }
 
+.header__online-icon.online {
+    background-image: url("../img/Ellipse_1_72.webp");
+}
+
+.header__online-icon.offline {
+    background-image: url("../img/Ellipse_1_73.webp");
+}
+
 .header__online-text {
     margin: 0 10px;
-    color: rgba(87, 215, 80, 1);
 }
 
 .header__button {
     width: 100%;
-    max-width: 270px;
+    max-width: fit-content;
     min-width: 160px;
     height: 44px;
     display: flex;
@@ -134,7 +158,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: clamp(10px, 3vh, 20px);
 
     /* Отступы */
     padding: clamp(24px, 4vh, 48px) clamp(20px, 3vw, 40px);
@@ -189,25 +212,23 @@
 }
 
 .header__open {
-    font-size: clamp(28px, 2.8vw, 72px);
+    font-size: clamp(20px, 11.0px + 2.75vw, 72px);
     color: rgba(244, 177, 74, 1);
     text-align: center;
     margin: 0;
-    max-width: 80%;
 }
 
 .header__description {
-    font-size: clamp(22px, 1.9vw, 52px);
-    color: rgba(244, 177, 74, 1);
+    font-size: clamp(20px, 9.0px + 2.0vw, 52px);
+    color: rgba(208, 190, 162, 1);
     text-align: center;
     margin: 0;
     max-width: 80%;
 }
 
 .header__cta-button {
-    width: clamp(140px, 36vw, 300px);
-    height: clamp(40px, 4vh, 60px);
-    margin-top: clamp(16px, 2vh, 32px);
+    width: clamp(100px, 75px + 18.75vw, 400px);
+    height: clamp(25px, 20.3125px + 1.5625vh, 50px);
 
     box-sizing: border-box;
     background: rgba(230, 165, 65, 1);
@@ -215,13 +236,13 @@
     border: 1px solid rgba(208, 190, 162, 1);
     border-radius: 2px;
     color: #ffffff;
-    font-size: clamp(18px, 1.8vw, 24px);
-
+    font-size: clamp(10px, 8.25px + 0.75vw, 18px);
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-
+    margin-top: clamp(16px, 6.4px + 3vw, 24px);
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -246,6 +267,10 @@
         background-position: center top, center top;
         min-height: calc(1200px * 1039 / 1920);
     }
+
+    .header__nav {
+        padding: 0px 0px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -257,10 +282,14 @@
 }
 
 /* Адаптивность для центрального блока */
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
 
     .header__logo-svg {
         width: clamp(300px, 45vw, 600px);
+    }
+
+    .header__logo {
+        display: none;
     }
 }
 
@@ -269,30 +298,42 @@
     .header__content-block {
         width: clamp(300px, 95vw, 600px);
         gap: clamp(6px, 1.5vw, 12px);
-        padding: clamp(12px, 2.8vw, 24px) clamp(12px, 4vw, 24px);
     }
 
     .header__logo-svg {
         width: clamp(250px, 40vw, 500px);
     }
 
+    .button-lk {
+        display: none;
+    }
 }
 
-@media (max-width: 950px) {
-    .header__logo {
+@media (max-width: 1000px) {
+    .header__online {
         display: none;
     }
 
     .header__nav {
+        height: 50px;
         display: flex;
         justify-content: center;
+    }
+}
+
+@media (max-width: 1400px) {
+    .header__nav a {
+        font-size: 12px;
+    }
+
+    .header__online span {
+        font-size: 12px;
     }
 }
 
 @media (max-width: 1450px) {
     .header__nav {
         height: 80px;
-        padding: 0 clamp(15px, 4%, 120px);
     }
 
     .header__logo {
@@ -312,6 +353,7 @@
         padding: 12px 24px;
         font-size: 18px;
     }
+
 }
 
 /* Мобильная навигация */
@@ -328,9 +370,6 @@
         display: none;
     }
 
-    .header__button {
-        display: none;
-    }
 
     .mobile-menu-toggle {
         display: block;
@@ -339,6 +378,7 @@
     .header__nav {
         justify-content: space-between;
         padding: 0 20px;
+        height: 50px;
     }
 }
 
@@ -362,5 +402,17 @@
 @media (max-width: 1024px) {
     .header__bg {
         height: auto;
+    }
+}
+
+@media (max-width: 426px) {
+    .header__content {
+        margin-top: 20%;
+    }
+}
+
+@media (max-width: 320px) {
+    .header__content {
+        margin-top: 30%;
     }
 }

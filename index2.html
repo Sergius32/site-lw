@@ -47,21 +47,11 @@
                     <div class="header__logo"></div>
                 </a>
                 <div class="header__online">
-                    {% for server in getServerAll() %}
-                    <div
-                        class="header__online-icon {% if server.getStatus().getGameServer() %}online{% else %}offline{% endif %}">
-                    </div>
-                    {% endfor %}
                     <div class="header__online-text inter">
-                        {% for server in getServerAll() %}{%
-                        if server.getStatus().getGameServer() %}<span
-                            style="color:rgba(87, 215, 80, 1);">Online</span>{%
-                        else %}<span style="color: rgb(249, 12, 12);">Offline</span>{% endif %}{% endfor %}
-                    </div>
-                    <div class="header__online-text inter">
-                        <span style="color:rgba(87, 215, 80, 1);">
-                            {% for server in getServerAll() %} {{ server.getStatus().getOnline() }} {% endfor %}
-                        </span>
+                        <span style="color:rgb(151,151,151);font-size: 12px">LEGEND-OLD</span>
+                        <span style="color:rgb(91,200,70);font-size: 12px"> ONLINE</span><br>
+                        <span style="color:rgb(213,211,211);font-size: 12px">LEGEND-NEW</span>
+                        <span style="color:rgb(215,177,80);font-size: 12px" data-i18n="header.openingDate"> Loading...</span>
                     </div>
                 </div>
                 <ul class="header__list">
@@ -265,7 +255,7 @@
                 </div>
                 <p data-i18n="footer.license.l2">THIS SERVER IS A TEST VERSION OF LINEAGE II AND IS INTENDED ONLY TO
                     KNOW PLAYERS. ALL RIGHTS RESERVED BY NCSOFT.</p>
-                <p data-i18n="footer.license.lw">© 2025 LEGEND-WORLD</p>
+                <p data-i18n="footer.license.lw">© 2025-2026 LEGEND-WORLD</p>
                 <div class="footer__social">
                     <a class="footer__social_vk" href="https://vk.com/legend_world_game"></a>
                     <a class="footer__social_inst" href="https://www.instagram.com/legend_world_l2/"></a>
@@ -334,8 +324,6 @@
             <span class="modal__close">&times;</span>
 
             <div class="modal__body">
-
-
                 <h2 class="modal__title footer__card-title" data-i18n="telegram.popup.title">Присоединяйтесь к нашей
                     группе!</h2>
                 <p class="modal__text footer__card-description" data-i18n="telegram.popup.description">
