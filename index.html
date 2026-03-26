@@ -106,62 +106,97 @@
     <section class="features">
         <div class="features__container">
             <h2 data-i18n="features.title" class="features__title gabriela-regular">ЧТО ТЕБЯ ЖДЁТ НА СЕРВЕРЕ</h2>
-            <div class="features__grid">
-                <div class="features__card">
-                    <div class="features__image">
-                        <img src="{{template}}/img/1.webp" alt="Feature 1" class="features__img">
-                    </div>
-                    <div class="features__content">
-                        <h3 data-i18n="features.farm.title" class="features__card-title">Собственная ферма</h3>
-                        <p data-i18n="features.farm.description" class="features__card-description">Уникальная механика
-                            фермы, где можно выращивать животных и получать пассивный доход</p>
-                    </div>
-                </div>
+            <div class="features__carousel" data-carousel="features">
+                <button class="features__nav features__nav--prev" type="button" aria-label="Предыдущая карточка">‹</button>
+                <div class="features__viewport">
+                    <div class="features__track">
+                        <div class="features__slide">
+                            <div class="features__card">
+                                <div class="features__image">
+                                    <img src="{{template}}/img/farm.webp" alt="Farm" class="features__img">
+                                </div>
+                                <div class="features__content">
+                                    <h3 data-i18n="features.farm.title" class="features__card-title">Loading...</h3>
+                                    <p data-i18n="features.farm.description" class="features__card-description">Loading...</p>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="features__card">
-                    <div class="features__image">
-                        <img src="{{template}}/img/2.webp" alt="Feature 2" class="features__img">
-                    </div>
-                    <div class="features__content">
-                        <h3 data-i18n="features.instances.title" class="features__card-title">Инстансы</h3>
-                        <p data-i18n="features.instances.description" class="features__card-description">Персональные
-                            фарм локации с вкусным дропом и рейдбоссом в конце</p>
-                    </div>
-                </div>
+                        <div class="features__slide">
+                            <div class="features__card">
+                                <div class="features__image">
+                                    <img src="{{template}}/img/instance.webp" alt="Instances" class="features__img">
+                                </div>
+                                <div class="features__content">
+                                    <h3 data-i18n="features.instances.title" class="features__card-title">Loading...</h3>
+                                    <p data-i18n="features.instances.description" class="features__card-description">Loading...</p>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="features__card">
-                    <div class="features__image">
-                        <img src="{{template}}/img/3.webp" alt="Feature 3" class="features__img">
-                    </div>
-                    <div class="features__content">
-                        <h3 data-i18n="features.gear.title" class="features__card-title">Экипировка</h3>
-                        <p data-i18n="features.gear.description" class="features__card-description">Сотни костюмов и
-                            аксессуаров, Rare-экипировка, 3 уровня эпик бижутерии, всё это отлично дополняет игру и не
-                            влияет на баланс классов</p>
-                    </div>
-                </div>
+                        <div class="features__slide">
+                            <div class="features__card">
+                                <div class="features__image">
+                                    <img src="{{template}}/img/mining.webp" alt="Mining" class="features__img">
+                                </div>
+                                <div class="features__content">
+                                    <h3 data-i18n="features.mining.title" class="features__card-title">Loading...</h3>
+                                    <p data-i18n="features.mining.description" class="features__card-description">Loading...</p>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="features__card">
-                    <div class="features__image">
-                        <img src="{{template}}/img/4.webp" alt="Feature 4" class="features__img">
-                    </div>
-                    <div class="features__content">
-                        <h3 data-i18n="features.fun.title" class="features__card-title">Комфортная игра и море фана</h3>
-                        <p data-i18n="features.fun.description" class="features__card-description">Стабильный сервер,
-                            высокий онлайн, различные ивенты и персональные турниры не дадут тебе скучать</p>
+                        <div class="features__slide">
+                            <div class="features__card">
+                                <div class="features__image">
+                                    <img src="{{template}}/img/equip.webp" alt="Equip" class="features__img">
+                                </div>
+                                <div class="features__content">
+                                    <h3 data-i18n="features.gear.title" class="features__card-title">Loading...</h3>
+                                    <p data-i18n="features.gear.description" class="features__card-description">Loading...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="features__slide">
+                            <div class="features__card">
+                                <div class="features__image">
+                                    <img src="{{template}}/img/5.webp" alt="Tournament" class="features__img">
+                                </div>
+                                <div class="features__content">
+                                    <h3 data-i18n="features.pvp.title" class="features__card-pvp-title">Loading...</h3>
+                                    <p data-i18n="features.pvp.description" class="features__card-pvp-description">Loading...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="features__slide">
+                            <div class="features__card">
+                                <div class="features__image">
+                                    <img src="{{template}}/img/4.webp" alt="PvP" class="features__img">
+                                </div>
+                                <div class="features__content">
+                                    <h3 data-i18n="features.fun.title" class="features__card-title">Loading...</h3>
+                                    <p data-i18n="features.fun.description" class="features__card-description">Loading...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="features__slide">
+                            <div class="features__card">
+                                <div class="features__image">
+                                    <img src="{{template}}/img/other.webp" alt="Other" class="features__img">
+                                </div>
+                                <div class="features__content">
+                                    <h3 data-i18n="features.other.title" class="features__card-pvp-title">Loading...</h3>
+                                    <p data-i18n="features.other.description" class="features__card-pvp-description">Loading...</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section class="features-pvp">
-        <div class="features__card">
-            <div class="features__image">
-                <img src="{{template}}/img/5.webp" alt="Feature 5" class="features__img">
-            </div>
-            <div class="features__content">
-                <h3 data-i18n="features.pvp.title" class="features__card-pvp-title">Loading...</h3>
-                <p data-i18n="features.pvp.description" class="features__card-pvp-description">Loading...</p>
+                <button class="features__nav features__nav--next" type="button" aria-label="Следующая карточка">›</button>
+                <div class="features__dots" aria-label="Навигация по карточкам"></div>
             </div>
         </div>
     </section>

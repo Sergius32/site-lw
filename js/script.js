@@ -1,4 +1,104 @@
 document.addEventListener('DOMContentLoaded', async () => {
+  function initFeaturesCarousel() {
+    const carousel = document.querySelector('[data-carousel="features"]');
+    if (!carousel) {
+      return;
+    }
+
+    const track = carousel.querySelector('.features__track');
+    const viewport = carousel.querySelector('.features__viewport');
+    const slides = Array.from(carousel.querySelectorAll('.features__slide'));
+    const prevButton = carousel.querySelector('.features__nav--prev');
+    const nextButton = carousel.querySelector('.features__nav--next');
+    const dotsContainer = carousel.querySelector('.features__dots');
+
+    if (!track || !viewport || slides.length === 0 || !prevButton || !nextButton || !dotsContainer) {
+      return;
+    }
+
+    let currentSlideIndex = 0;
+
+    slides.forEach((slideElement, slideIndex) => {
+      const dotButton = document.createElement('button');
+      dotButton.type = 'button';
+      dotButton.className = 'features__dot';
+      dotButton.setAttribute('aria-label', `Перейти к карточке ${slideIndex + 1}`);
+      dotButton.addEventListener('click', () => {
+        goToSlide(slideIndex);
+      });
+      dotsContainer.append(dotButton);
+    });
+
+    const dotButtons = Array.from(dotsContainer.querySelectorAll('.features__dot'));
+
+    function updateCarouselState() {
+      track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+      prevButton.disabled = currentSlideIndex === 0;
+      nextButton.disabled = currentSlideIndex === slides.length - 1;
+
+      dotButtons.forEach((dotButton, dotIndex) => {
+        dotButton.classList.toggle('is-active', dotIndex === currentSlideIndex);
+      });
+    }
+
+    function goToSlide(nextIndex) {
+      currentSlideIndex = Math.max(0, Math.min(nextIndex, slides.length - 1));
+      updateCarouselState();
+    }
+
+    prevButton.addEventListener('click', () => {
+      goToSlide(currentSlideIndex - 1);
+    });
+
+    nextButton.addEventListener('click', () => {
+      goToSlide(currentSlideIndex + 1);
+    });
+
+    let pointerStartX = 0;
+    let pointerStartY = 0;
+    let isPointerDown = false;
+    const swipeThreshold = 50;
+
+    viewport.addEventListener('pointerdown', (event) => {
+      if (event.pointerType !== 'touch' && event.pointerType !== 'pen') {
+        return;
+      }
+      isPointerDown = true;
+      pointerStartX = event.clientX;
+      pointerStartY = event.clientY;
+    });
+
+    viewport.addEventListener('pointerup', (event) => {
+      if (!isPointerDown) {
+        return;
+      }
+      isPointerDown = false;
+
+      const deltaX = event.clientX - pointerStartX;
+      const deltaY = event.clientY - pointerStartY;
+      const isHorizontalSwipe = Math.abs(deltaX) > Math.abs(deltaY);
+
+      if (!isHorizontalSwipe || Math.abs(deltaX) < swipeThreshold) {
+        return;
+      }
+
+      if (deltaX < 0) {
+        goToSlide(currentSlideIndex + 1);
+        return;
+      }
+
+      goToSlide(currentSlideIndex - 1);
+    });
+
+    viewport.addEventListener('pointercancel', () => {
+      isPointerDown = false;
+    });
+
+    updateCarouselState();
+  }
+
+  initFeaturesCarousel();
+
   // Вспомогательная функция: преобразует вложенный объект в плоский с ключами через точку
   function flattenObject(obj, prefix = '') {
     return Object.keys(obj).reduce((acc, key) => {
