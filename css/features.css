@@ -7,7 +7,7 @@
 }
 
 .features__container {
-  width: min(100%, 1680px);
+  width: min(80%, 1680px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -122,7 +122,6 @@
 .features__image {
   position: relative;
   display: block;
-  width: 100%;
 }
 
 .features__image::before {
@@ -138,8 +137,7 @@
 }
 
 .features__img {
-  width: 1680px;
-  height: 1050px;
+  height: auto;
   display: block;
   object-fit: cover;
 }
