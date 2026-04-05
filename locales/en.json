@@ -20,23 +20,31 @@
     "title": "WHAT AWAITS YOU ON THE SERVER",
     "farm": {
       "title": "Personal Farm",
-      "description": "Unique farm mechanics where you can raise animals and earn passive income "
+      "description": "Unique farm mechanics where you can raise animals and earn passive income."
     },
     "instances": {
       "title": "Instances",
-      "description": "Personal farm locations with delicious drops and a raid boss at the end with varying difficulty levels"
+      "description": "Personal farm locations with delicious drops and a raid-boss at the end with varying difficulty levels."
+    },
+    "mining": {
+      "title": "Mining",
+      "description": "Improve your mining skills, extract resources, and upgrade your equipment."
     },
     "gear": {
       "title": "Gear & Cosmetics",
-      "description": "Hundreds of costumes and accessories, rare gear, and 3 tiers of epic jewelry — all enhancing your experience without affecting class balance"
+      "description": "Dozens of costumes and accessories, R-Grade and L-grade gear, and 3 tiers of epic jewelry — all enhancing your experience without affecting class balance."
     },
     "fun": {
-      "title": "Comfortable Gameplay & Endless Fun",
-      "description": "Stable server, high population, various events, and personal tournaments to keep you entertained"
+      "title": "Bounty Hunting and Traitors of Legends",
+      "description": "Kill other players, take their adena, and for killing traitors you will get a bonus."
     },
     "pvp": {
       "title": "Automatic 1x1 PvP Tournament",
-      "description": "Single-elimination tournament with no second chances: all skills are reset, enchantment capped at +6, full buff availables, top 3 places rewarded — CoL"
+      "description": "Single-elimination tournament with no second chances: all skills are reset, enchantment capped at +6, full buff availables, top 3 places rewarded — CoL."
+    },
+    "other": {
+      "title": "Explore the world of Legends",
+      "description": "New mechanics, quests, high online play, various events, and personal tournaments will keep you entertained."
     }
   },
   "footer": {
@@ -63,7 +71,7 @@
     },
     "license": {
       "l2": "THIS SERVER IS A TEST VERSION OF LINEAGE II AND IS INTENDED ONLY TO KNOW PLAYERS. ALL RIGHTS RESERVED BY NCSOFT.",
-      "lw": "© 2025 LEGEND-WORLD"
+      "lw": "© 2025-2026 LEGEND-WORLD"
     },
     "menu": {
       "terms": "Terms of Use",
