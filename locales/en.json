@@ -73,10 +73,10 @@
   },
   "telegram": {
     "popup": {
-      "title": "Join Our Community!",
-      "description": "Get the latest news, updates and exclusive content in our Telegram group.",
-      "button": "Join the Group",
-      "later": "Maybe later"
+    "title": "Get a gift",
+    "description": "register right now and get a bonus",
+    "button": "Registration",
+    "later": "Miss it"
     }
   }
 }

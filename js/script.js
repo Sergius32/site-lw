@@ -132,12 +132,39 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Проверяем, показывали ли уже окно в этой сессии
   const telegramShown = sessionStorage.getItem('telegramPopupShown');
 
+  function startTelegramPopupCountdown(modal) {
+    if (!modal) return;
+    const countdownEl = modal.querySelector('#telegram-countdown');
+    if (!countdownEl) return;
+
+    let remaining = 10 * 60;
+
+    function updateCountdown() {
+      const minutes = String(Math.floor(remaining / 60)).padStart(2, '0');
+      const seconds = String(remaining % 60).padStart(2, '0');
+      countdownEl.textContent = `${minutes}:${seconds}`;
+      if (remaining <= 0) {
+        clearInterval(modal._telegramCountdownInterval);
+        return;
+      }
+      remaining -= 1;
+    }
+
+    if (modal._telegramCountdownInterval) {
+      clearInterval(modal._telegramCountdownInterval);
+    }
+
+    updateCountdown();
+    modal._telegramCountdownInterval = setInterval(updateCountdown, 1000);
+  }
+
   // В режиме отладки показываем всегда, иначе только один раз
   if (DEBUG_MODE || !telegramShown) {
     setTimeout(() => {
       const modal = document.getElementById('modal-telegram-auto');
       if (modal) {
         modal.style.display = 'block';
+        startTelegramPopupCountdown(modal);
         if (!DEBUG_MODE) {
           sessionStorage.setItem('telegramPopupShown', 'true');
         }
