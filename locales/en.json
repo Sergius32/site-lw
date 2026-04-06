@@ -83,8 +83,7 @@
     "popup": {
       "title": "REGISTRATION BONUS",
       "description": "Register now and get a bonus. Limited offer, only 173/600 left.",
-      "button": "Registration",
-      "later": "Miss it"
+      "button": "Registration"
     }
   }
 }
