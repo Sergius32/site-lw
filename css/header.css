@@ -241,6 +241,14 @@
     max-width: 80%;
 }
 
+.header__obt {
+    font-size: clamp(18px, 8.0px + 2.0vw, 46px);
+    color: rgb(179, 131, 56);
+    text-align: center;
+    margin: 0;
+    max-width: 80%;
+}
+
 .header__cta-button {
     width: clamp(100px, 75px + 18.75vw, 400px);
     height: clamp(25px, 20.3125px + 1.5625vh, 50px);
